@@ -1,16 +1,58 @@
 package org.example
+import java.util.*
 
-//TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
-// click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
-fun main() {
-    val name = "Kotlin"
-    //TIP Press <shortcut actionId="ShowIntentionActions"/> with your caret at the highlighted text
-    // to see how IntelliJ IDEA suggests fixing it.
-    println("Hello, " + name + "!")
+fun main(args: Array<String>){
 
-    for (i in 1..5) {
-        //TIP Press <shortcut actionId="Debug"/> to start debugging your code. We have set one <icon src="AllIcons.Debugger.Db_set_breakpoint"/> breakpoint
-        // for you, but you can always add more by pressing <shortcut actionId="ToggleLineBreakpoint"/>.
-        println("i = $i")
+    //INMUTABLES (No se RE ASIGNA "=")
+    val inmutable: String ="Adrian";
+    //inmutable = "Vicente"; //Error!
+
+    //MUTABLES
+    var mutable: String = "Vicente";
+    mutable = "Adrian"; //OK
+    // VAL > VAR
+
+    //Duck Typing
+    val ejemploVariable = "Cristopher Bonilla"
+    ejemploVariable.trim()
+    val edadEjemplo: Int = 12
+    //ejemploVariable = edadEjemplo // Error!
+
+    //Variables Primitivas
+    val nombreProfesor: String = "Adrian Eguez"
+    val sueldo: Double = 1.2
+    val estadoCivil: Char = 'C'
+    val mayorEdad: Boolean = true
+
+    //Clases en JAVA
+    val fechaNacimiento: Date = Date()
+
+    //When (Switch)
+    val estadoCivilWhen = "C"
+    when (estadoCivilWhen){
+        ("C") -> {
+            println("Casado")
+        }
+        "S" -> {
+            println("Soltero")
+        }
+        else ->{
+            println("No sabemos")
+        }
     }
+    val esSoltero = (estadoCivilWhen = "S")
+    val coqueteo = if (esSoltero) "Si" else "No" // if else chiquito
+    imprimirNombre("Cristopher")
+}
+
+fun imprimirNombre(nombre: String): Unit{
+    fun otraFuncionAdentro(){
+        println("Otra función dentro")
+    }
+    println("Nombre: $nombre") //Uson sin llaves
+    println("Nombre: ${nombre}") //Uso con llaves opcional
+    println("Nombre: ${nombre + nombre}") // Uso con llaves (concatenado)
+    println("Nombre: ${nombre.toString()}") // Uso con llaves (función)
+    println("Nombre: $nombre.toString()") //INCORRECTO! no se puede usar sin llaves
+    otraFuncionAdentro()
 }
