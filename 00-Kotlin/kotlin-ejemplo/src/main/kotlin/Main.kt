@@ -40,9 +40,22 @@ fun main(args: Array<String>){
             println("No sabemos")
         }
     }
-    val esSoltero = (estadoCivilWhen = "S")
+    val esSoltero = (estadoCivilWhen == "S")
     val coqueteo = if (esSoltero) "Si" else "No" // if else chiquito
+
     imprimirNombre("Cristopher")
+
+    calcularSueldo(10.00) //solo parametro requerido
+    calcularSueldo(10.00, 15.00, 20.00) // parametro requerido y sobreescribir parametros opcionales
+    // Named parameters
+    // calcularSueldo(sueldo, tasa, bonoEspecial)
+    calcularSueldo(10.00, bonoEspecial = 20.00) // usan el parametro bonoEspecial en 2da posición
+                                                        // gracias a los parametros nombrados
+    calcularSueldo(bonoEspecial = 20.00, sueldo = 10.00, tasa = 14.00)
+    // usando el parametro bonoEspecial en 1ra posición
+    // usando el parametro sueldo en 2da posición
+    // usando el parametro tasa en 3era posición
+    // gracias a los parámetros nombrados
 }
 
 fun imprimirNombre(nombre: String): Unit{
@@ -56,3 +69,53 @@ fun imprimirNombre(nombre: String): Unit{
     println("Nombre: $nombre.toString()") //INCORRECTO! no se puede usar sin llaves
     otraFuncionAdentro()
 }
+
+
+/*Clase 25-10-2024*/
+fun calcularSueldo(
+    sueldo:Double, //Requerido
+    tasa:Double = 12.00, // Opcional (defecto)
+    bonoEspecial:Double? = null //Opcional (nullable)
+    // Variable? -> "?" Es Nullable (En algún momento puede ser nulo)
+): Double {
+    // Int -> Int? (nullable)
+    // String -> String? (nullable)
+    // Date -> Date? (nullable)
+    if(bonoEspecial == null){
+        return sueldo * (100/tasa)
+    }else{
+        return sueldo * (100/tasa) * bonoEspecial
+    }
+}
+
+abstract class NumerosJava{
+    protected val numeroUno:Int
+    private val numeroDos: Int
+    constructor(
+        uno: Int,
+        dos: Int
+    ){
+        this.numeroUno = uno
+        this.numeroDos = dos
+        println("Inicializando")
+    }
+}
+
+abstract class Numeros( //Constructor primario
+    // Caso 1) Parametro normal
+    // uno: Int, (parametro sin modificador acceso)
+
+    // Caso 2) Parametro y propiedad (atributo) (protected)
+    // private var una: Int (propiedad "Instancia.uno")
+
+    protected val numeroUno: Int, // instacncia.numeroUno
+    protected val numeroDos: Int, // instancia.numeroDos
+){
+    init { // bloque constructor primario OPCIONAL
+        this.numeroUno
+        this.numeroDos
+        println("Inicializando")
+    }
+}
+
+
