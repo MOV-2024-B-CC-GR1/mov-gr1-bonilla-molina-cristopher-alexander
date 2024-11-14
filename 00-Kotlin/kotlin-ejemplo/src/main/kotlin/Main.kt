@@ -1,36 +1,35 @@
 package org.example
 import java.util.*
 
-fun main(args: Array<String>){
 
-    //INMUTABLES (No se RE ASIGNA "=")
-    val inmutable: String ="Adrian";
-    //inmutable = "Vicente"; //Error!
+fun main(args: Array<String>) {
 
-    //MUTABLES
-    var mutable: String = "Vicente";
-    mutable = "Adrian"; //OK
+    // INMUTABLES (No se RE ASIGNA "=")
+    val inmutable: String = "Cristopher";
+    // inmutable = "Bonilla" // Error!
+    // MUTABLES
+    var mutable: String = "Bonilla"
+    mutable = "Cristopher" // Ok
     // VAL > VAR
 
-    //Duck Typing
-    val ejemploVariable = "Cristopher Bonilla"
+
+    // Duck Typing
+    val ejemploVariable = " Cristopher Bonilla "
     ejemploVariable.trim()
     val edadEjemplo: Int = 12
-    //ejemploVariable = edadEjemplo // Error!
-
-    //Variables Primitivas
-    val nombreProfesor: String = "Adrian Eguez"
+    // ejemploVariable = edadEjemplo // Error!
+    // Variables Primitivas
+    val nombreProfesor: String = "Cristopher Bonilla"
     val sueldo: Double = 1.2
     val estadoCivil: Char = 'C'
-    val mayorEdad: Boolean = true
-
-    //Clases en JAVA
+    val mayorEdad:Boolean = true
+    // Clases en Java
     val fechaNacimiento: Date = Date()
 
-    //When (Switch)
+    // When (Switch)
     val estadoCivilWhen = "C"
     when (estadoCivilWhen){
-        ("C") -> {
+        ("C") ->{
             println("Casado")
         }
         "S" -> {
@@ -45,39 +44,128 @@ fun main(args: Array<String>){
 
     imprimirNombre("Cristopher")
 
-    calcularSueldo(10.00) //solo parametro requerido
-    calcularSueldo(10.00, 15.00, 20.00) // parametro requerido y sobreescribir parametros opcionales
+
+    calcularSueldo(10.00) // solo paramtro requerido
+    calcularSueldo(10.00,15.00,20.00) // parametro requerido y sobreescribir parametros opcionales
     // Named parameters
     // calcularSueldo(sueldo, tasa, bonoEspecial)
-    calcularSueldo(10.00, bonoEspecial = 20.00) // usan el parametro bonoEspecial en 2da posición
-                                                        // gracias a los parametros nombrados
-    calcularSueldo(bonoEspecial = 20.00, sueldo = 10.00, tasa = 14.00)
-    // usando el parametro bonoEspecial en 1ra posición
-    // usando el parametro sueldo en 2da posición
-    // usando el parametro tasa en 3era posición
-    // gracias a los parámetros nombrados
+    calcularSueldo(10.00, bonoEspecial = 20.00) // usando el parametro bonoEspecial en 2da posicion
+    // gracias a los parametros nombrados
+    calcularSueldo(bonoEspecial = 20.00, sueldo=10.00, tasa=14.00)
+    // usando el parametro bonoEspecial en 1ra posicion
+    // usando el parametro sueldo en 2da posicion
+    // usando el parametro tasa en 3era posicion
+    // gracias a los parametros nombrados
+    // CLASES USO:
+    val sumaA = Suma(1,1)
+    val sumaB = Suma(null, 1)
+    val sumaC = Suma(1, null)
+    val sumaD = Suma(null, null)
+    sumaA.sumar()
+    sumaB.sumar()
+    sumaC.sumar()
+    sumaD.sumar()
+    println(Suma.pi)
+    println(Suma.elevarAlCuadrado(2))
+    println(Suma.historialSumas)
+
+    //Arreglos
+    //Estaticos
+    val arregloEstatico: Array<Int> = arrayOf<Int>(1,2,3)
+    println(arregloEstatico)
+
+    //Dinamicos
+    val arregloDinamico: ArrayList<Int> = arrayListOf<Int>(
+        1,2,3,4,5,6,7,8,9,10
+    )
+    println("Arreglo Dinamico Inicial: ${arregloDinamico}")
+    arregloDinamico.add(11)
+    arregloDinamico.add(12)
+    println("Arreglo Dinamico Final: ${arregloDinamico}")
+
+    // FOR EACH => Unit
+    // Iterar un arreglo
+    val respuestaForEach: Unit = arregloDinamico
+        .forEach { valorActual: Int ->
+            println("Valor Actual: ${valorActual}");
+        }
+    // "it" (en ingles "eso") significa el elemento iterado
+    arregloDinamico.forEach{ println("Valor Actual (it): ${it}") }
+
+    // MAP -> MUTA (modifica cambia) el arreglo
+    // 1) Enviamos el nuevo valor de la iteración
+    // 2) Nos devuelve UN NUEVO ARREGLO con valores
+    // de las iteraciones
+    val respuestaMap: List<Double> = arregloDinamico
+        .map { valorActual: Int ->
+            return@map valorActual.toDouble() + 100.00
+        }
+    println(respuestaMap)
+    val respuestaMapDos = arregloDinamico.map { it +15 }
+    println(respuestaMapDos)
+
+    // Filter -> Filtrar el ARREGLO
+    // 1) Devolver una expresión (TRUE o FALSE)
+    // 2) Nuevo arreglo FILTRADO
+    val respuestaFilter: List<Int> = arregloDinamico
+        .filter { valorActual:Int ->
+            // Expresión o CONDICION
+            val mayoresACinco: Boolean = valorActual > 5
+            return@filter mayoresACinco
+        }
+    val respuestaFilterDos = arregloDinamico.filter { it <= 5 }
+    println(respuestaFilter)
+    println(respuestaFilterDos)
+    // OR AND
+    // OR -> ANY (Alguno Cumple?)
+    // And -> ALL (Todos Cumplen)
+    val respuestaAny: Boolean = arregloDinamico
+        .any { valorActual:Int ->
+            return@any (valorActual > 5)
+        }
+    println(respuestaAny) //True
+    val respuestaAll: Boolean = arregloDinamico
+        .all { valorActual: Int ->
+            return@all (valorActual >5)
+        }
+    println(respuestaAll) //False
+
+    // REDUCE -> Valor acumulado
+    // Valor acumulado = 0 (Siempre empieza en 0 en Kotlin)
+    // [1,2,3,4,5] -> Acumular "SUMAR" estos valores del arreglo
+    // valorIteracion1 = valorEmpieza + 1 = 0 + 1 = 1 -> Iteracion1
+    // valorIteracion2 = valorAcumuladoIteracion1 + 2 = 1 + 2 = 3 -> Iteracion2
+    // valorIteracion3 = valorAcumuladoIteracion2 + 3 = 3 + 3 = 6 -> Iteracion3
+    // valorIteracion4 = valorAcumuladoIteracion3 + 4 = 6 + 4 = 10 -> Iteracion4
+    // valorIteracion5 = valorAcumuladoIteracion4 + 5 = 10 + 5 = 15 -> Iteracion5
+    val respuestaReduce: Int = arregloDinamico
+        .reduce { acumulado:Int, valorActual:Int ->
+            return@reduce (acumulado + valorActual) // -> Cambiar o usar la lógica de negocio
+        }
+    println("Respuesta Reduce: ${respuestaReduce}")
+    // rerurn@reduce acumulado + (ItemCarrito.cantidad + itemCarrito.precio)
 }
 
-fun imprimirNombre(nombre: String): Unit{
+
+fun imprimirNombre(nombre:String): Unit{
     fun otraFuncionAdentro(){
-        println("Otra función dentro")
+        println("Otra funcion adentro")
     }
-    println("Nombre: $nombre") //Uson sin llaves
-    println("Nombre: ${nombre}") //Uso con llaves opcional
+    println("Nombre: $nombre") // Uso sin llaves
+    println("Nombre: ${nombre}") // Uso con llaves opcional
     println("Nombre: ${nombre + nombre}") // Uso con llaves (concatenado)
-    println("Nombre: ${nombre.toString()}") // Uso con llaves (función)
-    println("Nombre: $nombre.toString()") //INCORRECTO! no se puede usar sin llaves
+    println("Nombre: ${nombre.toString()}") // uso con llaves (funcion)
+    println("Nombre: $nombre.toString()") // INCORRECTO!
+    // (no pueden usar sin llaves)
     otraFuncionAdentro()
 }
 
-
-/*Clase 25-10-2024*/
 fun calcularSueldo(
-    sueldo:Double, //Requerido
-    tasa:Double = 12.00, // Opcional (defecto)
-    bonoEspecial:Double? = null //Opcional (nullable)
-    // Variable? -> "?" Es Nullable (En algún momento puede ser nulo)
-): Double {
+    sueldo:Double, // Requerido
+    tasa: Double = 12.00, // Opcional (defecto)
+    bonoEspecial:Double? = null // Opcional (nullable)
+    // Variable? -> "?" Es Nullable (osea que puede en algun momento ser nulo)
+):Double {
     // Int -> Int? (nullable)
     // String -> String? (nullable)
     // Date -> Date? (nullable)
@@ -88,12 +176,13 @@ fun calcularSueldo(
     }
 }
 
+
 abstract class NumerosJava{
     protected val numeroUno:Int
     private val numeroDos: Int
     constructor(
-        uno: Int,
-        dos: Int
+        uno:Int,
+        dos:Int
     ){
         this.numeroUno = uno
         this.numeroDos = dos
@@ -101,14 +190,13 @@ abstract class NumerosJava{
     }
 }
 
-abstract class Numeros( //Constructor primario
+abstract class Numeros( // Constructor Primario
     // Caso 1) Parametro normal
-    // uno: Int, (parametro sin modificador acceso)
+    // uno:Int , (parametro (sin modificador acceso))
 
     // Caso 2) Parametro y propiedad (atributo) (protected)
-    // private var una: Int (propiedad "Instancia.uno")
-
-    protected val numeroUno: Int, // instacncia.numeroUno
+    // private var uno: Int (propiedad "instancia.uno")
+    protected val numeroUno: Int, // instancia.numeroUno
     protected val numeroDos: Int, // instancia.numeroDos
     parametroNoUsadoNoPropiedadDeLaClase:Int? = null
 ){
