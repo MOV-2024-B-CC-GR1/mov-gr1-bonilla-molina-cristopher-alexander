@@ -110,6 +110,7 @@ abstract class Numeros( //Constructor primario
 
     protected val numeroUno: Int, // instacncia.numeroUno
     protected val numeroDos: Int, // instancia.numeroDos
+    parametroNoUsadoNoPropiedadDeLaClase:Int? = null
 ){
     init { // bloque constructor primario OPCIONAL
         this.numeroUno
@@ -118,4 +119,62 @@ abstract class Numeros( //Constructor primario
     }
 }
 
+class Suma( // Constructor primario
+    unoParametro: Int, // Parametro
+    dosParametro: Int, // Parametros
+): Numeros( // Clase papa, Numeros (extendiendo)
+    unoParametro,
+    dosParametro
+){
 
+    public val soyPublicoExplicito: String = "Publicas"
+    val soyPublicoImplicite: String = "Publico implicito"
+    init { // bloque constructor primario
+        this.numeroUno
+        this.numeroDos
+        numeroUno // this. OPCIONAL  [propiedades, metodos]
+        numeroDos // this. OPCIONAL  [propiedades, metodos]
+        this.soyPublicoImplicite
+        soyPublicoExplicito
+    }
+    constructor( // Constructor secundario
+        uno: Int?, // Entero nullable
+        dos: Int,
+    ):this(
+        if(uno == null) 0 else uno,
+        dos
+    ){
+        // Bloque de codigo de constructor secundario
+    }
+    constructor( // Constructor secundario
+        uno: Int,
+        dos: Int?, // Entero nullable
+    ):this(
+        uno,
+        if(dos == null) 0 else dos
+    )
+    constructor( // Constructor secundario
+        uno: Int?, // Entero nullable
+        dos: Int?,  // Entero nullable
+    ):this(
+        if(uno == null) 0 else uno,
+        if(dos == null) 0 else dos
+    )
+    fun sumar ():Int{
+        val total = numeroUno + numeroDos
+        agregarHistorial(total)
+        return total
+    }
+    companion object { // Comparte entre todas las instancias, similar al STATIC
+        // funciones, variables
+        // NombreClase.metodo, NombreClase.funcion =>
+        // Suma.pi
+        val pi = 3.14
+        // Suma.elevarAlCuadrado
+        fun elevarAlCuadrado(num:Int):Int{ return num * num }
+        val historialSumas = arrayListOf<Int>()
+        fun agregarHistorial(valorTotalSuma:Int){ // Suma.agregarHistorial
+            historialSumas.add(valorTotalSuma)
+        }
+    }
+}
