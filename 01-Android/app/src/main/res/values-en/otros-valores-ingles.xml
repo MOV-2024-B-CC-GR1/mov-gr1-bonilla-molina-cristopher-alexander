@@ -1,8 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">ccgr12024b_cabm</string>
+    <color name="saludo_color">#612305</color>
     <string name="saludo">Hello Friends</string>
     <string name="mensaje">Port En</string>
     <string name="dosmensaje">Lands En</string>
-    <color name="saludo_color">#2EA7B6</color>
-
 </resources>

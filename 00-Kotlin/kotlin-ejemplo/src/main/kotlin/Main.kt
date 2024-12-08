@@ -56,6 +56,7 @@ fun main(args: Array<String>) {
     // usando el parametro sueldo en 2da posicion
     // usando el parametro tasa en 3era posicion
     // gracias a los parametros nombrados
+
     // CLASES USO:
     val sumaA = Suma(1,1)
     val sumaB = Suma(null, 1)
@@ -161,10 +162,10 @@ fun imprimirNombre(nombre:String): Unit{
 }
 
 fun calcularSueldo(
-    sueldo:Double, // Requerido
+    sueldo: Double, // Requerido
     tasa: Double = 12.00, // Opcional (defecto)
-    bonoEspecial:Double? = null // Opcional (nullable)
-    // Variable? -> "?" Es Nullable (osea que puede en algun momento ser nulo)
+    bonoEspecial: Double? = null // Opcional (nullable)
+    // Variable? -> "?" Es Nullable (En algun momento puede ser nulo)
 ):Double {
     // Int -> Int? (nullable)
     // String -> String? (nullable)
@@ -214,9 +215,8 @@ class Suma( // Constructor primario
     unoParametro,
     dosParametro
 ){
-
-    public val soyPublicoExplicito: String = "Publicas"
-    val soyPublicoImplicite: String = "Publico implicito"
+    public val soyPublicoExplicito: String = "Públicas"
+    val soyPublicoImplicite: String = "Público implícito"
     init { // bloque constructor primario
         this.numeroUno
         this.numeroDos

@@ -21,3 +21,4 @@ dependencyResolutionManagement {
 
 rootProject.name = "ccgr12024b_cabm"
 include(":app")
+ 
