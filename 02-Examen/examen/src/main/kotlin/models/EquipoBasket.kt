@@ -7,5 +7,6 @@ class EquipoBasket (
     var fundado: LocalDate,
     var campeonatosGanados: Int,
     var activo: Boolean,
+    var promedioPuntos: Double,
     var jugadores: MutableList<Jugador> = mutableListOf()
 )

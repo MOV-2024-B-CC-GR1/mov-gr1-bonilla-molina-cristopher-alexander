@@ -40,6 +40,7 @@ object CRUD {
             println("  Ciudad: ${equipo.ciudad}")
             println("  Fundado: ${equipo.fundado}")
             println("  Campeonatos Ganados: ${equipo.campeonatosGanados}")
+            println("  Promedio De Puntos: ${equipo.promedioPuntos}")
             println("  Activo: ${equipo.activo}")
             if (equipo.jugadores.isEmpty()) {
                 println("  Jugadores: Sin registros.")
@@ -59,7 +60,7 @@ object CRUD {
             equipos[index] = equipoActualizado
             guardarEquiposEnArchivo(equipos)
         } else {
-            println("Índice fuera de rango.")
+            println("¡El Índice No Existe!")
         }
     }
 
@@ -68,7 +69,7 @@ object CRUD {
             equipos.removeAt(index)
             guardarEquiposEnArchivo(equipos)
         } else {
-            println("Índice fuera de rango.")
+            println("¡El Índice No Existe!")
         }
     }
 
@@ -86,7 +87,7 @@ object CRUD {
             equipos[equipoIndex].jugadores[jugadorIndex] = jugadorActualizado
             guardarEquiposEnArchivo(equipos)
         } else {
-            println("Índice fuera de rango.")
+            println("¡El Índice No Existe!")
         }
     }
 
@@ -95,7 +96,7 @@ object CRUD {
             equipos[equipoIndex].jugadores.removeAt(jugadorIndex)
             guardarEquiposEnArchivo(equipos)
         } else {
-            println("Índice fuera de rango.")
+            println("¡El Índice No Existe!")
         }
     }
 }

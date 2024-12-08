@@ -6,18 +6,18 @@ import java.time.LocalDate
 fun main() {
     val equipos = CRUD.cargarEquiposDesdeArchivo()
 
-    println("Bienvenido al sistema CRUD de Equipos y Jugadores.")
+    println("Bienvenido Al Sistema De Equipos Y Jugadores De Basket.")
 
     var opcionMenuPrincipal: Int
 
     do {
         println(
             """
-            Menú Principal:
+            ------------MENÚ PRINCIPAL------------
             1. Gestionar Equipos
             2. Gestionar Jugadores
             3. Salir
-            Elija una opción:
+            Elija Una Opción (Ej: 1):
             """.trimIndent()
         )
 
@@ -26,8 +26,8 @@ fun main() {
         when (opcionMenuPrincipal) {
             1 -> gestionarEquipos(equipos)
             2 -> gestionarJugadores(equipos)
-            3 -> println("Saliendo del programa...")
-            else -> println("Opción inválida. Intente nuevamente.")
+            3 -> println("Saliendo Del Programa...")
+            else -> println("Opción Inválida. Intente Nuevamente.")
         }
     } while (opcionMenuPrincipal != 3)
 }
@@ -38,13 +38,13 @@ fun gestionarEquipos(equipos: MutableList<EquipoBasket>) {
     do {
         println(
             """
-            Gestión de Equipos:
-            1. Crear Equipo
+            ------------Gestión De Equipos------------
+            1. Crear Un Equipo
             2. Leer Equipos
-            3. Actualizar Equipo
-            4. Eliminar Equipo
-            5. Regresar al Menú Principal
-            Elija una opción:
+            3. Actualizar Un Equipo
+            4. Eliminar Un Equipo
+            5. Regresar Al Menú Principal
+            Elija Una Opción (Ej: 1):
             """.trimIndent()
         )
 
@@ -60,10 +60,12 @@ fun gestionarEquipos(equipos: MutableList<EquipoBasket>) {
                 val fundado = LocalDate.parse(readLine() ?: "")
                 println("Ingrese la cantidad de campeonatos ganados:")
                 val campeonatosGanados = readLine()?.toIntOrNull() ?: 0
+                println("Ingrese el promedio de puntos por partido:")
+                val promedioPuntos = readLine()?.toDoubleOrNull() ?: 0.0
                 println("¿El equipo está activo? (true/false):")
                 val activo = readLine()?.toBoolean() ?: false
 
-                val equipo = EquipoBasket(nombre, ciudad, fundado, campeonatosGanados, activo)
+                val equipo = EquipoBasket(nombre, ciudad, fundado, campeonatosGanados, activo, promedioPuntos)
                 CRUD.crearEquipo(equipos, equipo)
             }
 
@@ -81,13 +83,15 @@ fun gestionarEquipos(equipos: MutableList<EquipoBasket>) {
                     val fundado = LocalDate.parse(readLine() ?: "")
                     println("Ingrese la nueva cantidad de campeonatos ganados:")
                     val campeonatosGanados = readLine()?.toIntOrNull() ?: 0
+                    println("Ingrese el promedio de puntos por partido:")
+                    val promedioPuntos = readLine()?.toDoubleOrNull() ?: 0.0
                     println("¿El equipo está activo? (true/false):")
                     val activo = readLine()?.toBoolean() ?: false
 
-                    val equipoActualizado = EquipoBasket(nombre, ciudad, fundado, campeonatosGanados, activo)
+                    val equipoActualizado = EquipoBasket(nombre, ciudad, fundado, campeonatosGanados, activo, promedioPuntos)
                     CRUD.actualizarEquipo(equipos, index, equipoActualizado)
                 } else {
-                    println("Índice fuera de rango.")
+                    println("¡El Índice No Existe!")
                 }
             }
 
@@ -97,8 +101,8 @@ fun gestionarEquipos(equipos: MutableList<EquipoBasket>) {
                 CRUD.eliminarEquipo(equipos, index)
             }
 
-            5 -> println("Regresando al Menú Principal...")
-            else -> println("Opción inválida. Intente nuevamente.")
+            5 -> println("Regresando Al Menú Principal...")
+            else -> println("Opción Inválida. Intente Nuevamente.")
         }
     } while (opcion != 5)
 }
@@ -109,13 +113,13 @@ fun gestionarJugadores(equipos: MutableList<EquipoBasket>) {
     do {
         println(
             """
-            Gestión de Jugadores:
-            1. Agregar Jugador
-            2. Leer Jugadores de un Equipo
-            3. Actualizar Jugador
-            4. Eliminar Jugador de un Equipo
-            5. Regresar al Menú Principal
-            Elija una opción:
+            ------------Gestión De Jugadores------------
+            1. Agregar Un Jugador
+            2. Leer Jugadores De Un Equipo
+            3. Actualizar Un Jugador
+            4. Eliminar Jugador De Un Equipo
+            5. Regresar Al Menú Principal
+            Elija Una Opción (Ej: 1):
             """.trimIndent()
         )
 
@@ -140,7 +144,7 @@ fun gestionarJugadores(equipos: MutableList<EquipoBasket>) {
                     val jugador = Jugador(nombre, edad, estatura, fechaIngreso, esTitular)
                     CRUD.agregarJugadorAEquipo(equipos, equipoIndex, jugador)
                 } else {
-                    println("Índice de equipo fuera de rango.")
+                    println("¡El Índice No Existe!")
                 }
             }
 
@@ -153,7 +157,7 @@ fun gestionarJugadores(equipos: MutableList<EquipoBasket>) {
                         println("Jugador $index: ${jugador.nombre}, Edad: ${jugador.edad}, Estatura: ${jugador.estatura}, Fecha de Ingreso: ${jugador.fechaIngreso}, Titular: ${jugador.esTitular}")
                     }
                 } else {
-                    println("Índice fuera de rango.")
+                    println("¡El Índice No Existe!")
                 }
             }
 
@@ -178,10 +182,10 @@ fun gestionarJugadores(equipos: MutableList<EquipoBasket>) {
                         val jugadorActualizado = Jugador(nombre, edad, estatura, fechaIngreso, esTitular)
                         CRUD.actualizarJugadorDeEquipo(equipos, equipoIndex, jugadorIndex, jugadorActualizado)
                     } else {
-                        println("Índice de jugador fuera de rango.")
+                        println("¡El Índice No Existe!")
                     }
                 } else {
-                    println("Índice de equipo fuera de rango.")
+                    println("¡El Índice No Existe!")
                 }
             }
 
@@ -197,8 +201,8 @@ fun gestionarJugadores(equipos: MutableList<EquipoBasket>) {
                 }
             }
 
-            5 -> println("Regresando al Menú Principal...")
-            else -> println("Opción inválida. Intente nuevamente.")
+            5 -> println("Regresando Al Menú Principal...")
+            else -> println("Opción Inválida. Intente Nuevamente.")
         }
     } while (opcion != 5)
 }
