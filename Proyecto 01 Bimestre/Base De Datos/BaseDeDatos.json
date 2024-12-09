@@ -1,0 +1,1599 @@
+{
+  "modelName": "Base",
+  "collections": [
+    {
+      "GUID": "1f6e8f7d-4f5d-4491-b3b0-dee160939d10",
+      "collectionName": "Usuario",
+      "type": "object",
+      "properties": [
+        {
+          "name": "ID_Usuario",
+          "hackoladeMeta": {},
+          "isActivated": true,
+          "primaryKey": true,
+          "type": "string",
+          "GUID": "f5a64141-c02a-4ba9-8b6d-cd93e5e8f210",
+          "required": true,
+          "error": {},
+          "childRelationships": [
+            "58a78cc5-2c88-4912-a989-ca925e179bef",
+            "f555b578-ae7c-4274-8c20-ee3162b11ea5",
+            "b212824a-50ec-4066-9425-2903ee363e41",
+            "b7acd737-6104-46af-9466-cecc5d0f8e2f",
+            "c18e0544-af03-4c16-9eb7-5e958472b3ce"
+          ]
+        },
+        {
+          "name": "Nombre",
+          "hackoladeMeta": {},
+          "isActivated": true,
+          "primaryKey": false,
+          "type": "string",
+          "GUID": "45e3cea9-5c52-4601-a979-b71839eae98c",
+          "required": false,
+          "error": {}
+        },
+        {
+          "name": "Correo ",
+          "hackoladeMeta": {},
+          "isActivated": true,
+          "primaryKey": false,
+          "type": "string",
+          "GUID": "72dffd5e-25be-4bd7-b551-552b7b0cd698",
+          "required": false,
+          "format": "email",
+          "error": {}
+        },
+        {
+          "name": "Contrasena",
+          "hackoladeMeta": {},
+          "isActivated": true,
+          "primaryKey": false,
+          "type": "string",
+          "GUID": "f4ce24f7-d7e3-49cf-9e7d-036793adea38",
+          "required": false,
+          "error": {}
+        },
+        {
+          "name": "Direccion",
+          "hackoladeMeta": {},
+          "isActivated": true,
+          "primaryKey": false,
+          "type": "string",
+          "GUID": "0d237652-aa5c-4a04-a650-c167efa60ab0",
+          "error": {}
+        },
+        {
+          "name": "Telefono",
+          "hackoladeMeta": {},
+          "isActivated": true,
+          "exclusiveMinimum": false,
+          "exclusiveMaximum": false,
+          "primaryKey": false,
+          "childType": "number",
+          "type": "numeric",
+          "GUID": "e5fb1ab6-d20e-429f-9c3b-f0acaf9eab87",
+          "required": false,
+          "error": {}
+        },
+        {
+          "name": "Rol",
+          "hackoladeMeta": {},
+          "isActivated": true,
+          "primaryKey": false,
+          "type": "string",
+          "GUID": "ba3b2cbd-6148-4a1e-a348-fce7c2f1f67c",
+          "required": false,
+          "error": {}
+        },
+        {
+          "name": "Foto",
+          "hackoladeMeta": {},
+          "isActivated": true,
+          "primaryKey": false,
+          "properties": [],
+          "additionalProperties": false,
+          "childType": "object",
+          "type": "document",
+          "documentId": false,
+          "containerLevelKey": false,
+          "hasERDDivider": false,
+          "error": {},
+          "GUID": "fe82e06a-00d4-4782-aaa4-48f797b47099"
+        },
+        {
+          "name": "Fecha_Registro",
+          "hackoladeMeta": {},
+          "isActivated": true,
+          "primaryKey": false,
+          "type": "string",
+          "GUID": "6a48a5db-8cc6-46e5-85f6-5d728d5a1cc3",
+          "format": "date",
+          "error": {}
+        }
+      ],
+      "definitions": {
+        "type": "definitions",
+        "properties": [],
+        "GUID": "1b1bf465-226e-4c7b-9b7d-02e380f14858"
+      },
+      "isActivated": true,
+      "additionalProperties": false,
+      "collectionUsers": []
+    },
+    {
+      "GUID": "67f1811d-9788-4429-b31b-14bc7e7c9215",
+      "collectionName": "Mascota",
+      "type": "object",
+      "properties": [
+        {
+          "name": "ID_Mascota",
+          "hackoladeMeta": {},
+          "isActivated": true,
+          "primaryKey": true,
+          "type": "string",
+          "GUID": "f8a75664-2da5-46d4-bfe8-520168f67fe0",
+          "required": true,
+          "error": {},
+          "childRelationships": [
+            "39eabdc4-73ea-4f61-ad88-99ed60183f07",
+            "f8810cf7-54b5-4005-abe8-adbe84df2a13"
+          ]
+        },
+        {
+          "name": "ID_Usuario",
+          "hackoladeMeta": {},
+          "isActivated": true,
+          "primaryKey": false,
+          "type": "string",
+          "GUID": "489ecfa9-67bf-48e0-84d0-d233ac7f43bb",
+          "required": false,
+          "error": {},
+          "foreignCollection": "1f6e8f7d-4f5d-4491-b3b0-dee160939d10",
+          "foreignField": [
+            "1f6e8f7d-4f5d-4491-b3b0-dee160939d10",
+            "f5a64141-c02a-4ba9-8b6d-cd93e5e8f210"
+          ],
+          "relationshipType": "Foreign Key",
+          "parentRelationship": "58a78cc5-2c88-4912-a989-ca925e179bef"
+        },
+        {
+          "name": "Nombre",
+          "hackoladeMeta": {},
+          "isActivated": true,
+          "primaryKey": false,
+          "type": "string",
+          "GUID": "e8f58ce1-7469-4a15-a34e-9c5e4e04b56f",
+          "required": false,
+          "error": {}
+        },
+        {
+          "name": "Raza",
+          "hackoladeMeta": {},
+          "isActivated": true,
+          "primaryKey": false,
+          "type": "string",
+          "GUID": "dbe98349-dbc9-4076-8cc1-d3ca5461db82",
+          "required": false,
+          "error": {}
+        },
+        {
+          "name": "Mestiza",
+          "hackoladeMeta": {},
+          "isActivated": true,
+          "primaryKey": false,
+          "childType": "boolean",
+          "type": "boolean",
+          "required": false,
+          "GUID": "8668035e-ab74-4e1d-a163-565d07595d66",
+          "error": {}
+        },
+        {
+          "name": "Edad",
+          "hackoladeMeta": {},
+          "isActivated": true,
+          "exclusiveMinimum": false,
+          "exclusiveMaximum": false,
+          "primaryKey": false,
+          "childType": "number",
+          "type": "numeric",
+          "GUID": "d1e84006-f285-494b-97f8-0bdb670189f4",
+          "required": false,
+          "error": {}
+        },
+        {
+          "name": "Peso",
+          "hackoladeMeta": {},
+          "isActivated": true,
+          "exclusiveMinimum": false,
+          "exclusiveMaximum": false,
+          "primaryKey": false,
+          "childType": "number",
+          "type": "numeric",
+          "GUID": "5fc51f5d-5af7-4453-b110-45d7bf419eed",
+          "required": false,
+          "error": {}
+        },
+        {
+          "name": "Altura",
+          "hackoladeMeta": {},
+          "isActivated": true,
+          "exclusiveMinimum": false,
+          "exclusiveMaximum": false,
+          "primaryKey": false,
+          "childType": "number",
+          "type": "numeric",
+          "GUID": "8c09fa86-64ed-46e0-b8b5-57b8fc6dc42f",
+          "required": false,
+          "error": {}
+        },
+        {
+          "name": "Foto",
+          "hackoladeMeta": {},
+          "isActivated": true,
+          "primaryKey": false,
+          "properties": [],
+          "additionalProperties": false,
+          "childType": "object",
+          "type": "document",
+          "documentId": false,
+          "containerLevelKey": false,
+          "hasERDDivider": false,
+          "error": {
+            "name": false
+          },
+          "GUID": "26e27f15-3636-4a5f-95c1-759374ddc046"
+        },
+        {
+          "name": "Fecha_Nacimiento",
+          "hackoladeMeta": {},
+          "isActivated": true,
+          "primaryKey": false,
+          "type": "string",
+          "GUID": "0600c43b-0404-4749-b252-ab5bcd8d8456",
+          "format": "date",
+          "error": {}
+        },
+        {
+          "name": "Estado_Salud",
+          "hackoladeMeta": {},
+          "isActivated": true,
+          "primaryKey": false,
+          "type": "string",
+          "GUID": "55f2cb58-f79c-4d54-bcbe-6b0e499d093e",
+          "required": false,
+          "error": {}
+        },
+        {
+          "name": "Estres",
+          "hackoladeMeta": {},
+          "isActivated": true,
+          "primaryKey": false,
+          "type": "string",
+          "GUID": "be6fa357-3122-4f0e-a848-965727ba0659",
+          "required": false,
+          "error": {}
+        }
+      ],
+      "definitions": {
+        "type": "definitions",
+        "properties": [],
+        "GUID": "73ee0757-871f-4761-aba6-6ccbf702d75b"
+      },
+      "isActivated": true,
+      "additionalProperties": false,
+      "collectionUsers": []
+    },
+    {
+      "GUID": "39717585-de17-452e-b766-a701b4c61d4c",
+      "collectionName": "Veterinaria",
+      "type": "object",
+      "properties": [
+        {
+          "name": "ID_Veterinaria",
+          "hackoladeMeta": {},
+          "isActivated": true,
+          "primaryKey": true,
+          "type": "string",
+          "GUID": "4c57677a-8adf-4507-8543-ddb68778b61d",
+          "required": true,
+          "error": {}
+        },
+        {
+          "name": "ID_Mascota",
+          "hackoladeMeta": {},
+          "isActivated": true,
+          "primaryKey": false,
+          "type": "string",
+          "GUID": "7e368112-7535-43fe-968b-2a5c5b6ec6c5",
+          "error": {},
+          "foreignCollection": "67f1811d-9788-4429-b31b-14bc7e7c9215",
+          "foreignField": [
+            "67f1811d-9788-4429-b31b-14bc7e7c9215",
+            "f8a75664-2da5-46d4-bfe8-520168f67fe0"
+          ],
+          "relationshipType": "Foreign Key",
+          "parentRelationship": "f8810cf7-54b5-4005-abe8-adbe84df2a13"
+        },
+        {
+          "name": "Nombre",
+          "hackoladeMeta": {},
+          "isActivated": true,
+          "primaryKey": false,
+          "type": "string",
+          "GUID": "d0b4d1c8-3851-4d70-b811-1f7dc835ec6a",
+          "required": false,
+          "error": {}
+        },
+        {
+          "name": "Direccion",
+          "hackoladeMeta": {},
+          "isActivated": true,
+          "primaryKey": false,
+          "type": "string",
+          "GUID": "fa9a9c38-565a-4ff7-91e0-ac8f86c0d74a",
+          "required": false,
+          "error": {}
+        },
+        {
+          "name": "Telefono",
+          "hackoladeMeta": {},
+          "isActivated": true,
+          "exclusiveMinimum": false,
+          "exclusiveMaximum": false,
+          "primaryKey": false,
+          "childType": "number",
+          "type": "numeric",
+          "required": false,
+          "GUID": "74d1eb68-737e-434e-b95d-5d39461c0e5d",
+          "error": {}
+        },
+        {
+          "name": "Horarios",
+          "hackoladeMeta": {},
+          "isActivated": true,
+          "primaryKey": false,
+          "type": "string",
+          "required": false,
+          "GUID": "40b665fd-0fe1-4366-9fbb-70a7ebe3c91b",
+          "error": {}
+        },
+        {
+          "name": "Especialidad",
+          "hackoladeMeta": {},
+          "isActivated": true,
+          "primaryKey": false,
+          "type": "string",
+          "GUID": "22df1983-daff-4c97-bb87-35678431f4f0",
+          "error": {
+            "name": false
+          }
+        }
+      ],
+      "definitions": {
+        "type": "definitions",
+        "properties": [],
+        "GUID": "f0f96ad9-afff-45f0-bb3f-b32de0372b91"
+      },
+      "isActivated": true,
+      "additionalProperties": false,
+      "collectionUsers": []
+    },
+    {
+      "GUID": "51cfe50e-67fd-4ff7-9777-28bb9087274d",
+      "collectionName": "Albergue",
+      "type": "object",
+      "properties": [
+        {
+          "hackoladeMeta": {},
+          "isActivated": true,
+          "primaryKey": true,
+          "type": "string",
+          "GUID": "8a582463-5166-4fca-aea9-1d0b7b5ddabd",
+          "name": "ID_Albergue",
+          "required": true,
+          "error": {},
+          "childRelationships": [
+            "2cd4e56a-3d84-4349-b87c-0c1c905263d2"
+          ]
+        },
+        {
+          "hackoladeMeta": {},
+          "isActivated": true,
+          "primaryKey": false,
+          "type": "string",
+          "GUID": "52b59edf-85f2-4fd0-babe-138c7219f6fe",
+          "name": "Nombre",
+          "required": false,
+          "error": {}
+        },
+        {
+          "hackoladeMeta": {},
+          "isActivated": true,
+          "primaryKey": false,
+          "type": "string",
+          "GUID": "c6257066-acbe-493b-aa0d-abb0aa27a5bf",
+          "name": "Direccion",
+          "required": false,
+          "error": {}
+        },
+        {
+          "name": "Telefono",
+          "hackoladeMeta": {},
+          "isActivated": true,
+          "exclusiveMinimum": false,
+          "exclusiveMaximum": false,
+          "primaryKey": false,
+          "childType": "number",
+          "type": "numeric",
+          "GUID": "00c15c09-5fca-482d-8f5f-6899bef8273e",
+          "required": false,
+          "error": {}
+        },
+        {
+          "name": "Capacidad",
+          "hackoladeMeta": {},
+          "isActivated": true,
+          "exclusiveMinimum": false,
+          "exclusiveMaximum": false,
+          "primaryKey": false,
+          "childType": "number",
+          "type": "numeric",
+          "error": {},
+          "GUID": "8d3b649f-b37c-45e2-8d12-704e511cd757"
+        },
+        {
+          "name": "Descripcion",
+          "hackoladeMeta": {},
+          "isActivated": true,
+          "primaryKey": false,
+          "type": "string",
+          "GUID": "83293118-f785-4c54-83b5-ec0f9ab8ad9f",
+          "error": {}
+        }
+      ],
+      "definitions": {
+        "type": "definitions",
+        "properties": [],
+        "GUID": "60d54885-f665-4662-9bcb-6192ab17aab7"
+      },
+      "isActivated": true,
+      "additionalProperties": false,
+      "collectionUsers": []
+    },
+    {
+      "GUID": "fca66774-e5d0-44ad-ab88-058663ed669d",
+      "collectionName": "Adopcion",
+      "type": "object",
+      "properties": [
+        {
+          "name": "ID_Adopcion",
+          "hackoladeMeta": {},
+          "isActivated": true,
+          "primaryKey": true,
+          "type": "string",
+          "GUID": "80ebf665-cbb2-46c9-8ccc-0fa758ff0328",
+          "required": true,
+          "error": {}
+        },
+        {
+          "name": "ID_Albergue",
+          "hackoladeMeta": {},
+          "isActivated": true,
+          "primaryKey": false,
+          "type": "string",
+          "GUID": "b60a2bdc-3b34-44a0-a1c1-259534b8e829",
+          "required": false,
+          "error": {},
+          "foreignCollection": "51cfe50e-67fd-4ff7-9777-28bb9087274d",
+          "foreignField": [
+            "51cfe50e-67fd-4ff7-9777-28bb9087274d",
+            "8a582463-5166-4fca-aea9-1d0b7b5ddabd"
+          ],
+          "relationshipType": "Foreign Key",
+          "parentRelationship": "2cd4e56a-3d84-4349-b87c-0c1c905263d2"
+        },
+        {
+          "name": "ID_Usuario",
+          "hackoladeMeta": {},
+          "isActivated": true,
+          "primaryKey": false,
+          "type": "string",
+          "GUID": "a89c497d-e43a-4346-91b6-32f4d48682c1",
+          "required": false,
+          "error": {},
+          "foreignCollection": "1f6e8f7d-4f5d-4491-b3b0-dee160939d10",
+          "foreignField": [
+            "1f6e8f7d-4f5d-4491-b3b0-dee160939d10",
+            "f5a64141-c02a-4ba9-8b6d-cd93e5e8f210"
+          ],
+          "relationshipType": "Foreign Key",
+          "parentRelationship": "b212824a-50ec-4066-9425-2903ee363e41"
+        },
+        {
+          "name": "Fecha_Adopcion",
+          "hackoladeMeta": {},
+          "isActivated": true,
+          "primaryKey": false,
+          "type": "string",
+          "GUID": "78c05752-4649-4e52-a38f-b57a1c6312fa",
+          "required": false,
+          "format": "date",
+          "error": {}
+        },
+        {
+          "name": "Estado_Adopcion",
+          "hackoladeMeta": {},
+          "isActivated": true,
+          "primaryKey": false,
+          "type": "string",
+          "GUID": "7099514d-cca7-4f20-9417-d506a350d743",
+          "required": false,
+          "error": {}
+        }
+      ],
+      "definitions": {
+        "type": "definitions",
+        "properties": [],
+        "GUID": "7c5c2e39-ab61-4ab4-a1b7-a0bfe9a244d1"
+      },
+      "isActivated": true,
+      "additionalProperties": false,
+      "collectionUsers": []
+    },
+    {
+      "GUID": "615ee886-5abb-4f8a-9e49-d2b14a135c28",
+      "collectionName": "Voluntariado",
+      "type": "object",
+      "properties": [
+        {
+          "name": "ID_Voluntariado",
+          "hackoladeMeta": {},
+          "isActivated": true,
+          "primaryKey": true,
+          "type": "string",
+          "GUID": "b5e182d0-b2da-4dec-a319-e46fd37b30f7",
+          "required": true,
+          "error": {}
+        },
+        {
+          "hackoladeMeta": {},
+          "isActivated": true,
+          "primaryKey": false,
+          "type": "string",
+          "GUID": "15309a83-807b-48cf-9b38-62a919c1f663",
+          "name": "ID_Usuario",
+          "required": false,
+          "error": {},
+          "foreignCollection": "1f6e8f7d-4f5d-4491-b3b0-dee160939d10",
+          "foreignField": [
+            "1f6e8f7d-4f5d-4491-b3b0-dee160939d10",
+            "f5a64141-c02a-4ba9-8b6d-cd93e5e8f210"
+          ],
+          "relationshipType": "Foreign Key",
+          "parentRelationship": "f555b578-ae7c-4274-8c20-ee3162b11ea5"
+        },
+        {
+          "name": "ID_Albergue",
+          "hackoladeMeta": {},
+          "isActivated": true,
+          "primaryKey": false,
+          "type": "string",
+          "GUID": "550c4ea5-1148-4d04-8472-a148cbbd06e7",
+          "required": false,
+          "error": {}
+        },
+        {
+          "name": "Actividad",
+          "hackoladeMeta": {},
+          "isActivated": true,
+          "primaryKey": false,
+          "type": "string",
+          "GUID": "0987d8d1-192f-4ff1-88d8-78168c17d406",
+          "required": false,
+          "error": {}
+        },
+        {
+          "name": "Fecha",
+          "hackoladeMeta": {},
+          "isActivated": true,
+          "primaryKey": false,
+          "type": "string",
+          "GUID": "b177270d-8eb4-4574-8c10-2892e44df1d1",
+          "required": false,
+          "format": "date",
+          "error": {}
+        }
+      ],
+      "definitions": {
+        "type": "definitions",
+        "properties": [],
+        "GUID": "41150428-2b6d-454f-95d0-839f66cd644b"
+      },
+      "isActivated": true,
+      "additionalProperties": false,
+      "collectionUsers": []
+    },
+    {
+      "GUID": "46051a13-d013-4fff-a311-24bf09b2ce9f",
+      "collectionName": "Reto",
+      "type": "object",
+      "properties": [
+        {
+          "name": "ID_Reto",
+          "hackoladeMeta": {},
+          "isActivated": true,
+          "primaryKey": true,
+          "type": "string",
+          "GUID": "cb38d7f4-4fb7-4444-85da-18c712d4e80c",
+          "required": true,
+          "error": {},
+          "childRelationships": [
+            "ca976239-0dec-4add-8707-89999feff219"
+          ]
+        },
+        {
+          "name": "ID_Usuario",
+          "hackoladeMeta": {},
+          "isActivated": true,
+          "primaryKey": false,
+          "type": "string",
+          "GUID": "49d3bc68-95ee-4a71-a056-510c6e834ae1",
+          "error": {},
+          "foreignCollection": "1f6e8f7d-4f5d-4491-b3b0-dee160939d10",
+          "foreignField": [
+            "1f6e8f7d-4f5d-4491-b3b0-dee160939d10",
+            "f5a64141-c02a-4ba9-8b6d-cd93e5e8f210"
+          ],
+          "relationshipType": "Foreign Key",
+          "parentRelationship": "b7acd737-6104-46af-9466-cecc5d0f8e2f"
+        },
+        {
+          "name": "ID_Mascota",
+          "hackoladeMeta": {},
+          "isActivated": true,
+          "primaryKey": false,
+          "type": "string",
+          "GUID": "60f585b9-616c-474f-9df8-9039256f90b2",
+          "error": {},
+          "foreignCollection": "67f1811d-9788-4429-b31b-14bc7e7c9215",
+          "foreignField": [
+            "67f1811d-9788-4429-b31b-14bc7e7c9215",
+            "f8a75664-2da5-46d4-bfe8-520168f67fe0"
+          ],
+          "relationshipType": "Foreign Key",
+          "parentRelationship": "39eabdc4-73ea-4f61-ad88-99ed60183f07"
+        },
+        {
+          "name": "Descripcion",
+          "hackoladeMeta": {},
+          "isActivated": true,
+          "primaryKey": false,
+          "type": "string",
+          "GUID": "19f9560f-18c5-47ce-8346-514491096870",
+          "error": {}
+        },
+        {
+          "name": "Fecha_Inicio",
+          "hackoladeMeta": {},
+          "isActivated": true,
+          "primaryKey": false,
+          "type": "string",
+          "GUID": "218cedc6-23e1-4d68-932e-8a7f438d5d47",
+          "format": "date-time",
+          "required": false,
+          "error": {}
+        },
+        {
+          "name": "Fecha_Fin",
+          "hackoladeMeta": {},
+          "isActivated": true,
+          "primaryKey": false,
+          "type": "string",
+          "GUID": "8280f7df-5b5a-447f-9147-26b72be24898",
+          "required": false,
+          "format": "date-time",
+          "error": {}
+        },
+        {
+          "hackoladeMeta": {},
+          "isActivated": true,
+          "primaryKey": false,
+          "type": "string",
+          "GUID": "937c6fff-1eb0-44c2-8326-634842507965",
+          "name": "Tipo_Actividad",
+          "required": false,
+          "error": {}
+        },
+        {
+          "name": "Recompensa",
+          "hackoladeMeta": {},
+          "isActivated": true,
+          "primaryKey": false,
+          "type": "string",
+          "GUID": "0b40205f-8994-428b-970f-da79f55855df",
+          "error": {}
+        }
+      ],
+      "definitions": {
+        "type": "definitions",
+        "properties": [],
+        "GUID": "c56570d7-9c39-44c5-9f39-eac034e94dcb"
+      },
+      "isActivated": true,
+      "additionalProperties": false,
+      "collectionUsers": []
+    },
+    {
+      "GUID": "a4839e11-ae2d-43e8-bcb1-45689da6d1c6",
+      "collectionName": "Recompensa",
+      "type": "object",
+      "properties": [
+        {
+          "name": "ID_Recompensa",
+          "hackoladeMeta": {},
+          "isActivated": true,
+          "primaryKey": true,
+          "type": "string",
+          "GUID": "bee52eab-99e6-4e07-9fbb-9329bf757e7f",
+          "required": true,
+          "error": {}
+        },
+        {
+          "name": "ID_Reto",
+          "hackoladeMeta": {},
+          "isActivated": true,
+          "primaryKey": false,
+          "type": "string",
+          "GUID": "dd276e98-f887-4212-b6c9-cd941a9494b4",
+          "required": false,
+          "error": {},
+          "foreignCollection": "46051a13-d013-4fff-a311-24bf09b2ce9f",
+          "foreignField": [
+            "46051a13-d013-4fff-a311-24bf09b2ce9f",
+            "cb38d7f4-4fb7-4444-85da-18c712d4e80c"
+          ],
+          "relationshipType": "Foreign Key",
+          "parentRelationship": "ca976239-0dec-4add-8707-89999feff219"
+        },
+        {
+          "name": "Descripcion",
+          "hackoladeMeta": {},
+          "isActivated": true,
+          "primaryKey": false,
+          "type": "string",
+          "GUID": "37217397-9ea1-4932-a01f-0ccd3a1c79a3",
+          "error": {
+            "name": false
+          }
+        },
+        {
+          "name": "Cantidad",
+          "hackoladeMeta": {},
+          "isActivated": true,
+          "exclusiveMinimum": false,
+          "exclusiveMaximum": false,
+          "primaryKey": false,
+          "childType": "number",
+          "type": "numeric",
+          "required": false,
+          "GUID": "db22d06b-f038-43a5-a799-563ab49546c9",
+          "error": {}
+        },
+        {
+          "name": "Estado",
+          "hackoladeMeta": {},
+          "isActivated": true,
+          "primaryKey": false,
+          "type": "string",
+          "GUID": "4432db02-94d9-461f-b280-f38a5855abc6",
+          "error": {}
+        }
+      ],
+      "definitions": {
+        "type": "definitions",
+        "properties": [],
+        "GUID": "7742c11b-67c4-48d9-a305-7db20cb2d0f9"
+      },
+      "isActivated": true,
+      "additionalProperties": false,
+      "collectionUsers": []
+    },
+    {
+      "GUID": "267a0adc-41c3-4066-94dc-1915d02d399e",
+      "collectionName": "Socialización",
+      "type": "object",
+      "properties": [
+        {
+          "name": "ID_Evento",
+          "hackoladeMeta": {},
+          "isActivated": true,
+          "primaryKey": true,
+          "type": "string",
+          "GUID": "47b66a0f-8c0e-461d-82a5-6807d9c52a88",
+          "required": true,
+          "error": {}
+        },
+        {
+          "name": "ID_Usuario",
+          "hackoladeMeta": {},
+          "isActivated": true,
+          "primaryKey": false,
+          "type": "string",
+          "GUID": "ca5e052f-d68a-4fbf-964b-9924f119eb83",
+          "error": {},
+          "foreignCollection": "1f6e8f7d-4f5d-4491-b3b0-dee160939d10",
+          "foreignField": [
+            "1f6e8f7d-4f5d-4491-b3b0-dee160939d10",
+            "f5a64141-c02a-4ba9-8b6d-cd93e5e8f210"
+          ],
+          "relationshipType": "Foreign Key",
+          "parentRelationship": "c18e0544-af03-4c16-9eb7-5e958472b3ce"
+        },
+        {
+          "name": "Nombre",
+          "hackoladeMeta": {},
+          "isActivated": true,
+          "primaryKey": false,
+          "type": "string",
+          "GUID": "375cb420-558e-4092-87a6-42fe2e6d4113",
+          "error": {}
+        },
+        {
+          "name": "Fecha",
+          "hackoladeMeta": {},
+          "isActivated": true,
+          "primaryKey": false,
+          "type": "string",
+          "GUID": "08a5f26e-5443-4e2f-abab-7247f463f84d",
+          "format": "date",
+          "error": {}
+        },
+        {
+          "hackoladeMeta": {},
+          "isActivated": true,
+          "primaryKey": false,
+          "type": "string",
+          "GUID": "bf904e5d-fd6f-46f9-9af4-cad111b68985",
+          "name": "Ubicacion",
+          "error": {}
+        },
+        {
+          "name": "Descripcion",
+          "hackoladeMeta": {},
+          "isActivated": true,
+          "primaryKey": false,
+          "type": "string",
+          "GUID": "6a9fa150-685a-45a5-b170-5167a564bae0",
+          "error": {}
+        },
+        {
+          "name": "Participantes",
+          "hackoladeMeta": {},
+          "isActivated": true,
+          "primaryKey": false,
+          "type": "string",
+          "GUID": "709c6611-3060-4d9a-afd3-047aa60957de",
+          "error": {}
+        }
+      ],
+      "definitions": {
+        "type": "definitions",
+        "properties": [],
+        "GUID": "9644dfe3-659b-40d8-8ff6-2e11f5d11b69"
+      },
+      "isActivated": true,
+      "additionalProperties": false,
+      "collectionUsers": []
+    }
+  ],
+  "buckets": [],
+  "views": [],
+  "relationships": [
+    {
+      "name": "fk_Usuario_ID_Usuario_to_Mascota_ID_Usuario",
+      "relationshipType": "Foreign Key",
+      "parentField": [
+        [
+          "1f6e8f7d-4f5d-4491-b3b0-dee160939d10",
+          "f5a64141-c02a-4ba9-8b6d-cd93e5e8f210"
+        ]
+      ],
+      "parentCardinality": "1",
+      "childField": [
+        [
+          "67f1811d-9788-4429-b31b-14bc7e7c9215",
+          "489ecfa9-67bf-48e0-84d0-d233ac7f43bb"
+        ]
+      ],
+      "isActivated": true,
+      "childCardinality": "1..n",
+      "GUID": "58a78cc5-2c88-4912-a989-ca925e179bef",
+      "parentCollection": "1f6e8f7d-4f5d-4491-b3b0-dee160939d10",
+      "childCollection": "67f1811d-9788-4429-b31b-14bc7e7c9215",
+      "hackoladeStyles": {
+        "GUID": "40a9490d-22dd-45af-a777-61dca21a43c3",
+        "autoPositioning": true,
+        "type": "Orthogonal",
+        "thickness": 2,
+        "color": "#79c4ff",
+        "dataType": "",
+        "shape": [
+          {
+            "x": 1417.9788557213924,
+            "y": 1341.9751243781102
+          },
+          {
+            "x": 1349.9894278606962,
+            "y": 1341.9751243781102
+          },
+          {
+            "x": 1349.9894278606962,
+            "y": 1186.25
+          },
+          {
+            "x": 1282,
+            "y": 1186.25
+          }
+        ],
+        "sides": [
+          "left",
+          "right"
+        ]
+      }
+    },
+    {
+      "name": "fk_Usuario_ID_Usuario_to_Voluntariado_ID_Usuario",
+      "relationshipType": "Foreign Key",
+      "parentField": [
+        [
+          "1f6e8f7d-4f5d-4491-b3b0-dee160939d10",
+          "f5a64141-c02a-4ba9-8b6d-cd93e5e8f210"
+        ]
+      ],
+      "parentCardinality": "1",
+      "childField": [
+        [
+          "615ee886-5abb-4f8a-9e49-d2b14a135c28",
+          "15309a83-807b-48cf-9b38-62a919c1f663"
+        ]
+      ],
+      "isActivated": true,
+      "childCardinality": "1..n",
+      "GUID": "f555b578-ae7c-4274-8c20-ee3162b11ea5",
+      "parentCollection": "1f6e8f7d-4f5d-4491-b3b0-dee160939d10",
+      "childCollection": "615ee886-5abb-4f8a-9e49-d2b14a135c28",
+      "hackoladeStyles": {
+        "GUID": "b0fa400c-23a6-4665-be57-63f7ddf7d26b",
+        "autoPositioning": true,
+        "type": "Orthogonal",
+        "thickness": 2,
+        "color": "#79c4ff",
+        "dataType": "",
+        "shape": [
+          {
+            "x": 1183.5833333333317,
+            "y": 947.7848258706459
+          },
+          {
+            "x": 1307,
+            "y": 947.7848258706459
+          },
+          {
+            "x": 1307,
+            "y": 1088.75
+          },
+          {
+            "x": 1282,
+            "y": 1088.75
+          }
+        ],
+        "sides": [
+          "right",
+          "right"
+        ]
+      }
+    },
+    {
+      "name": "fk_Usuario_ID_Usuario_to_Adopcion_ID_Usuario",
+      "relationshipType": "Foreign Key",
+      "parentField": [
+        [
+          "1f6e8f7d-4f5d-4491-b3b0-dee160939d10",
+          "f5a64141-c02a-4ba9-8b6d-cd93e5e8f210"
+        ]
+      ],
+      "parentCardinality": "1",
+      "childField": [
+        [
+          "fca66774-e5d0-44ad-ab88-058663ed669d",
+          "a89c497d-e43a-4346-91b6-32f4d48682c1"
+        ]
+      ],
+      "isActivated": true,
+      "childCardinality": "1..n",
+      "GUID": "b212824a-50ec-4066-9425-2903ee363e41",
+      "parentCollection": "1f6e8f7d-4f5d-4491-b3b0-dee160939d10",
+      "childCollection": "fca66774-e5d0-44ad-ab88-058663ed669d",
+      "hackoladeStyles": {
+        "GUID": "3f2a61a9-55eb-491e-891d-79a5a642e57e",
+        "autoPositioning": true,
+        "type": "Orthogonal",
+        "thickness": 2,
+        "color": "#79c4ff",
+        "dataType": "",
+        "shape": [
+          {
+            "x": 1155.956467661691,
+            "y": 1328.6069651741286
+          },
+          {
+            "x": 1155.956467661691,
+            "y": 1281.8034825870643
+          },
+          {
+            "x": 1161,
+            "y": 1281.8034825870643
+          },
+          {
+            "x": 1161,
+            "y": 1235
+          }
+        ],
+        "sides": [
+          "top",
+          "bottom"
+        ]
+      }
+    },
+    {
+      "name": "fk_Albergue_ID_Albergue_to_Adopcion_ID_Albergue",
+      "relationshipType": "Foreign Key",
+      "parentField": [
+        [
+          "51cfe50e-67fd-4ff7-9777-28bb9087274d",
+          "8a582463-5166-4fca-aea9-1d0b7b5ddabd"
+        ]
+      ],
+      "parentCardinality": "1",
+      "childField": [
+        [
+          "fca66774-e5d0-44ad-ab88-058663ed669d",
+          "b60a2bdc-3b34-44a0-a1c1-259534b8e829"
+        ]
+      ],
+      "isActivated": true,
+      "childCardinality": "1..n",
+      "GUID": "2cd4e56a-3d84-4349-b87c-0c1c905263d2",
+      "parentCollection": "51cfe50e-67fd-4ff7-9777-28bb9087274d",
+      "childCollection": "fca66774-e5d0-44ad-ab88-058663ed669d",
+      "hackoladeStyles": {
+        "GUID": "02cb8ad6-384e-445f-98ab-3c110b6cb75a",
+        "autoPositioning": true,
+        "type": "Orthogonal",
+        "thickness": 2,
+        "color": "#79c4ff",
+        "dataType": "",
+        "shape": [
+          {
+            "x": 1031.956467661691,
+            "y": 1390.1069651741286
+          },
+          {
+            "x": 994.1884328358204,
+            "y": 1390.1069651741286
+          },
+          {
+            "x": 994.1884328358204,
+            "y": 1382.5621890547275
+          },
+          {
+            "x": 956.4203980099498,
+            "y": 1382.5621890547275
+          }
+        ],
+        "sides": [
+          "left",
+          "right"
+        ]
+      }
+    },
+    {
+      "name": "fk_Usuario_ID_Usuario_to_Reto_ID_Usuario",
+      "relationshipType": "Foreign Key",
+      "parentField": [
+        [
+          "1f6e8f7d-4f5d-4491-b3b0-dee160939d10",
+          "f5a64141-c02a-4ba9-8b6d-cd93e5e8f210"
+        ]
+      ],
+      "parentCardinality": "1..n",
+      "childField": [
+        [
+          "46051a13-d013-4fff-a311-24bf09b2ce9f",
+          "49d3bc68-95ee-4a71-a056-510c6e834ae1"
+        ]
+      ],
+      "isActivated": true,
+      "childCardinality": "1..n",
+      "GUID": "b7acd737-6104-46af-9466-cecc5d0f8e2f",
+      "parentCollection": "1f6e8f7d-4f5d-4491-b3b0-dee160939d10",
+      "childCollection": "46051a13-d013-4fff-a311-24bf09b2ce9f",
+      "hackoladeStyles": {
+        "GUID": "357da86e-458c-48ca-867a-497b7175a511",
+        "autoPositioning": true,
+        "type": "Orthogonal",
+        "thickness": 2,
+        "color": "#79c4ff",
+        "dataType": "",
+        "shape": [
+          {
+            "x": 1409.6330845771133,
+            "y": 1061.8706467661686
+          },
+          {
+            "x": 1345.8165422885568,
+            "y": 1061.8706467661686
+          },
+          {
+            "x": 1345.8165422885568,
+            "y": 1137.5
+          },
+          {
+            "x": 1282,
+            "y": 1137.5
+          }
+        ],
+        "sides": [
+          "left",
+          "right"
+        ]
+      }
+    },
+    {
+      "name": "fk_Reto_ID_Reto_to_Recompensa_ID_Reto",
+      "relationshipType": "Foreign Key",
+      "parentField": [
+        [
+          "46051a13-d013-4fff-a311-24bf09b2ce9f",
+          "cb38d7f4-4fb7-4444-85da-18c712d4e80c"
+        ]
+      ],
+      "parentCardinality": "1",
+      "childField": [
+        [
+          "a4839e11-ae2d-43e8-bcb1-45689da6d1c6",
+          "dd276e98-f887-4212-b6c9-cd941a9494b4"
+        ]
+      ],
+      "isActivated": true,
+      "childCardinality": "1..n",
+      "GUID": "ca976239-0dec-4add-8707-89999feff219",
+      "parentCollection": "46051a13-d013-4fff-a311-24bf09b2ce9f",
+      "childCollection": "a4839e11-ae2d-43e8-bcb1-45689da6d1c6",
+      "hackoladeStyles": {
+        "GUID": "023cb536-fafd-4171-ae43-68c78eece828",
+        "autoPositioning": true,
+        "type": "Orthogonal",
+        "thickness": 2,
+        "color": "#79c4ff",
+        "dataType": "",
+        "shape": [
+          {
+            "x": 1909.9129353233825,
+            "y": 1137.2748756218919
+          },
+          {
+            "x": 1791.2730099502478,
+            "y": 1137.2748756218919
+          },
+          {
+            "x": 1791.2730099502478,
+            "y": 1061.8706467661686
+          },
+          {
+            "x": 1672.6330845771133,
+            "y": 1061.8706467661686
+          }
+        ],
+        "sides": [
+          "left",
+          "right"
+        ]
+      }
+    },
+    {
+      "name": "fk_Usuario_ID_Usuario_to_Socialización_ID_Usuario",
+      "relationshipType": "Foreign Key",
+      "parentField": [
+        [
+          "1f6e8f7d-4f5d-4491-b3b0-dee160939d10",
+          "f5a64141-c02a-4ba9-8b6d-cd93e5e8f210"
+        ]
+      ],
+      "parentCardinality": "1..n",
+      "childField": [
+        [
+          "267a0adc-41c3-4066-94dc-1915d02d399e",
+          "ca5e052f-d68a-4fbf-964b-9924f119eb83"
+        ]
+      ],
+      "isActivated": true,
+      "childCardinality": "1..n",
+      "GUID": "c18e0544-af03-4c16-9eb7-5e958472b3ce",
+      "parentCollection": "1f6e8f7d-4f5d-4491-b3b0-dee160939d10",
+      "childCollection": "267a0adc-41c3-4066-94dc-1915d02d399e",
+      "hackoladeStyles": {
+        "GUID": "06f35430-5125-46b5-8557-4e6d42c98b3b",
+        "autoPositioning": true,
+        "type": "Orthogonal",
+        "thickness": 2,
+        "color": "#79c4ff",
+        "dataType": "",
+        "shape": [
+          {
+            "x": 982.3619402985071,
+            "y": 1142.4502487562197
+          },
+          {
+            "x": 1011.1809701492535,
+            "y": 1142.4502487562197
+          },
+          {
+            "x": 1011.1809701492535,
+            "y": 1137.5
+          },
+          {
+            "x": 1040,
+            "y": 1137.5
+          }
+        ],
+        "sides": [
+          "right",
+          "left"
+        ]
+      }
+    },
+    {
+      "name": "fk_Mascota_ID_Mascota_to_Reto_ID_Mascota",
+      "relationshipType": "Foreign Key",
+      "parentField": [
+        [
+          "67f1811d-9788-4429-b31b-14bc7e7c9215",
+          "f8a75664-2da5-46d4-bfe8-520168f67fe0"
+        ]
+      ],
+      "parentCardinality": "1..n",
+      "childField": [
+        [
+          "46051a13-d013-4fff-a311-24bf09b2ce9f",
+          "60f585b9-616c-474f-9df8-9039256f90b2"
+        ]
+      ],
+      "isActivated": true,
+      "childCardinality": "1..n",
+      "GUID": "39eabdc4-73ea-4f61-ad88-99ed60183f07",
+      "parentCollection": "67f1811d-9788-4429-b31b-14bc7e7c9215",
+      "childCollection": "46051a13-d013-4fff-a311-24bf09b2ce9f",
+      "hackoladeStyles": {
+        "GUID": "b4cd1b98-95eb-4006-bdfb-dc3fdbfdb3c2",
+        "autoPositioning": true,
+        "type": "Orthogonal",
+        "thickness": 2,
+        "color": "#79c4ff",
+        "dataType": "",
+        "shape": [
+          {
+            "x": 1541.1330845771133,
+            "y": 1150.3706467661686
+          },
+          {
+            "x": 1541.1330845771133,
+            "y": 1183.9228855721394
+          },
+          {
+            "x": 1545.4788557213924,
+            "y": 1183.9228855721394
+          },
+          {
+            "x": 1545.4788557213924,
+            "y": 1217.4751243781102
+          }
+        ],
+        "sides": [
+          "bottom",
+          "top"
+        ]
+      }
+    },
+    {
+      "name": "fk_Mascota_ID_Mascota_to_Veterinaria_ID_Mascota",
+      "relationshipType": "Foreign Key",
+      "parentField": [
+        [
+          "67f1811d-9788-4429-b31b-14bc7e7c9215",
+          "f8a75664-2da5-46d4-bfe8-520168f67fe0"
+        ]
+      ],
+      "parentCardinality": "1..n",
+      "childField": [
+        [
+          "39717585-de17-452e-b766-a701b4c61d4c",
+          "7e368112-7535-43fe-968b-2a5c5b6ec6c5"
+        ]
+      ],
+      "isActivated": true,
+      "childCardinality": "1..n",
+      "GUID": "f8810cf7-54b5-4005-abe8-adbe84df2a13",
+      "parentCollection": "67f1811d-9788-4429-b31b-14bc7e7c9215",
+      "childCollection": "39717585-de17-452e-b766-a701b4c61d4c",
+      "hackoladeStyles": {
+        "GUID": "53c90f6c-5a3a-412e-bb1d-03f3e2194d36",
+        "autoPositioning": true,
+        "type": "Orthogonal",
+        "thickness": 2,
+        "color": "#79c4ff",
+        "dataType": "",
+        "shape": [
+          {
+            "x": 1823.0833333333317,
+            "y": 1333.4477611940313
+          },
+          {
+            "x": 1748.031094527362,
+            "y": 1333.4477611940313
+          },
+          {
+            "x": 1748.031094527362,
+            "y": 1341.9751243781102
+          },
+          {
+            "x": 1672.9788557213924,
+            "y": 1341.9751243781102
+          }
+        ],
+        "sides": [
+          "left",
+          "right"
+        ]
+      }
+    }
+  ],
+  "users": [],
+  "diagramViews": [],
+  "idToNameHashTable": {
+    "1f6e8f7d-4f5d-4491-b3b0-dee160939d10": "Usuario",
+    "f5a64141-c02a-4ba9-8b6d-cd93e5e8f210": "ID_Usuario",
+    "45e3cea9-5c52-4601-a979-b71839eae98c": "Nombre",
+    "72dffd5e-25be-4bd7-b551-552b7b0cd698": "Correo ",
+    "67f1811d-9788-4429-b31b-14bc7e7c9215": "Mascota",
+    "f8a75664-2da5-46d4-bfe8-520168f67fe0": "ID_Mascota",
+    "489ecfa9-67bf-48e0-84d0-d233ac7f43bb": "ID_Usuario",
+    "e8f58ce1-7469-4a15-a34e-9c5e4e04b56f": "Nombre",
+    "39717585-de17-452e-b766-a701b4c61d4c": "Veterinaria",
+    "4c57677a-8adf-4507-8543-ddb68778b61d": "ID_Veterinaria",
+    "d0b4d1c8-3851-4d70-b811-1f7dc835ec6a": "Nombre",
+    "fa9a9c38-565a-4ff7-91e0-ac8f86c0d74a": "Direccion",
+    "51cfe50e-67fd-4ff7-9777-28bb9087274d": "Albergue",
+    "8a582463-5166-4fca-aea9-1d0b7b5ddabd": "ID_Albergue",
+    "52b59edf-85f2-4fd0-babe-138c7219f6fe": "Nombre",
+    "c6257066-acbe-493b-aa0d-abb0aa27a5bf": "Direccion",
+    "fca66774-e5d0-44ad-ab88-058663ed669d": "Adopcion",
+    "80ebf665-cbb2-46c9-8ccc-0fa758ff0328": "ID_Adopcion",
+    "a89c497d-e43a-4346-91b6-32f4d48682c1": "ID_Usuario",
+    "615ee886-5abb-4f8a-9e49-d2b14a135c28": "Voluntariado",
+    "b5e182d0-b2da-4dec-a319-e46fd37b30f7": "ID_Voluntariado",
+    "15309a83-807b-48cf-9b38-62a919c1f663": "ID_Usuario",
+    "550c4ea5-1148-4d04-8472-a148cbbd06e7": "ID_Albergue",
+    "46051a13-d013-4fff-a311-24bf09b2ce9f": "Reto",
+    "cb38d7f4-4fb7-4444-85da-18c712d4e80c": "ID_Reto",
+    "19f9560f-18c5-47ce-8346-514491096870": "Descripcion",
+    "218cedc6-23e1-4d68-932e-8a7f438d5d47": "Fecha_Inicio",
+    "a4839e11-ae2d-43e8-bcb1-45689da6d1c6": "Recompensa",
+    "bee52eab-99e6-4e07-9fbb-9329bf757e7f": "ID_Recompensa",
+    "dd276e98-f887-4212-b6c9-cd941a9494b4": "ID_Reto",
+    "f4ce24f7-d7e3-49cf-9e7d-036793adea38": "Contrasena",
+    "0d237652-aa5c-4a04-a650-c167efa60ab0": "Direccion",
+    "e5fb1ab6-d20e-429f-9c3b-f0acaf9eab87": "Telefono",
+    "ba3b2cbd-6148-4a1e-a348-fce7c2f1f67c": "Rol",
+    "d1e84006-f285-494b-97f8-0bdb670189f4": "Edad",
+    "5fc51f5d-5af7-4453-b110-45d7bf419eed": "Peso",
+    "8c09fa86-64ed-46e0-b8b5-57b8fc6dc42f": "Altura",
+    "26e27f15-3636-4a5f-95c1-759374ddc046": "Foto",
+    "74d1eb68-737e-434e-b95d-5d39461c0e5d": "Telefono",
+    "8668035e-ab74-4e1d-a163-565d07595d66": "Mestiza",
+    "40b665fd-0fe1-4366-9fbb-70a7ebe3c91b": "Horarios",
+    "22df1983-daff-4c97-bb87-35678431f4f0": "Especialidad",
+    "00c15c09-5fca-482d-8f5f-6899bef8273e": "Telefono",
+    "8d3b649f-b37c-45e2-8d12-704e511cd757": "Capacidad",
+    "83293118-f785-4c54-83b5-ec0f9ab8ad9f": "Descripcion",
+    "78c05752-4649-4e52-a38f-b57a1c6312fa": "Fecha_Adopcion",
+    "7099514d-cca7-4f20-9417-d506a350d743": "Estado_Adopcion",
+    "0987d8d1-192f-4ff1-88d8-78168c17d406": "Actividad",
+    "b177270d-8eb4-4574-8c10-2892e44df1d1": "Fecha",
+    "8280f7df-5b5a-447f-9147-26b72be24898": "Fecha_Fin",
+    "937c6fff-1eb0-44c2-8326-634842507965": "Tipo_Actividad",
+    "db22d06b-f038-43a5-a799-563ab49546c9": "Cantidad",
+    "dbe98349-dbc9-4076-8cc1-d3ca5461db82": "Raza",
+    "fe82e06a-00d4-4782-aaa4-48f797b47099": "Foto",
+    "6a48a5db-8cc6-46e5-85f6-5d728d5a1cc3": "Fecha_Registro",
+    "0600c43b-0404-4749-b252-ab5bcd8d8456": "Fecha_Nacimiento",
+    "55f2cb58-f79c-4d54-bcbe-6b0e499d093e": "Estado_Salud",
+    "be6fa357-3122-4f0e-a848-965727ba0659": "Estres",
+    "0b40205f-8994-428b-970f-da79f55855df": "Recompensa",
+    "37217397-9ea1-4932-a01f-0ccd3a1c79a3": "Descripcion",
+    "4432db02-94d9-461f-b280-f38a5855abc6": "Estado",
+    "b60a2bdc-3b34-44a0-a1c1-259534b8e829": "ID_Albergue",
+    "267a0adc-41c3-4066-94dc-1915d02d399e": "Socialización",
+    "47b66a0f-8c0e-461d-82a5-6807d9c52a88": "ID_Evento",
+    "375cb420-558e-4092-87a6-42fe2e6d4113": "Nombre",
+    "08a5f26e-5443-4e2f-abab-7247f463f84d": "Fecha",
+    "bf904e5d-fd6f-46f9-9af4-cad111b68985": "Ubicacion",
+    "6a9fa150-685a-45a5-b170-5167a564bae0": "Descripcion",
+    "709c6611-3060-4d9a-afd3-047aa60957de": "Participantes",
+    "58a78cc5-2c88-4912-a989-ca925e179bef": "fk_Usuario_ID_Usuario_to_Mascota_ID_Usuario",
+    "f555b578-ae7c-4274-8c20-ee3162b11ea5": "fk_Usuario_ID_Usuario_to_Voluntariado_ID_Usuario",
+    "b212824a-50ec-4066-9425-2903ee363e41": "fk_Usuario_ID_Usuario_to_Adopcion_ID_Usuario",
+    "2cd4e56a-3d84-4349-b87c-0c1c905263d2": "fk_Albergue_ID_Albergue_to_Adopcion_ID_Albergue",
+    "49d3bc68-95ee-4a71-a056-510c6e834ae1": "ID_Usuario",
+    "b7acd737-6104-46af-9466-cecc5d0f8e2f": "fk_Usuario_ID_Usuario_to_Reto_ID_Usuario",
+    "ca976239-0dec-4add-8707-89999feff219": "fk_Reto_ID_Reto_to_Recompensa_ID_Reto",
+    "ca5e052f-d68a-4fbf-964b-9924f119eb83": "ID_Usuario",
+    "c18e0544-af03-4c16-9eb7-5e958472b3ce": "fk_Usuario_ID_Usuario_to_Socialización_ID_Usuario",
+    "60f585b9-616c-474f-9df8-9039256f90b2": "ID_Mascota",
+    "39eabdc4-73ea-4f61-ad88-99ed60183f07": "fk_Mascota_ID_Mascota_to_Reto_ID_Mascota",
+    "7e368112-7535-43fe-968b-2a5c5b6ec6c5": "ID_Mascota",
+    "f8810cf7-54b5-4005-abe8-adbe84df2a13": "fk_Mascota_ID_Mascota_to_Veterinaria_ID_Mascota"
+  },
+  "definitions": {
+    "type": "definitions",
+    "properties": [],
+    "GUID": "a09e949d-72dd-44de-b908-65c606b8cf36"
+  },
+  "polyglotDefinitions": {
+    "type": "polyglotDefinitions",
+    "properties": [],
+    "GUID": "6cb9b91d-79e3-4cef-af65-fcb00fdde66e"
+  },
+  "externalDefinitions": {
+    "type": "externalDefinitions",
+    "properties": [],
+    "GUID": "950f1eb0-b7cc-4d89-9297-4f74aed8eaf3"
+  },
+  "sources": [],
+  "decorativeSymbols": [],
+  "dbVendor": "Realtime Firebase",
+  "appTarget": "FIREBASE",
+  "creationTS": "2024-12-08T20:47:49.153Z",
+  "GUID": "ba71c676-4b84-4373-a149-320cf97b33e9",
+  "isLineageEnabled": false,
+  "lastModifTS": "2024-12-08T23:26:04.012Z",
+  "persistenceSchemaVersion": "7",
+  "isCreatedByPlugin": true,
+  "pluginInformation": {
+    "pluginName": "Firebase",
+    "pluginVersion": "0.2.1",
+    "pluginEngineVersion": "1.0.0"
+  },
+  "applicationInformation": {
+    "version": "7.9.1"
+  },
+  "hackoladeMeta": {
+    "validationErrors": {
+      "modelName": false
+    }
+  },
+  "settings": {
+    "centralPane": {
+      "dbLevel": {
+        "erd": [
+          {
+            "GUID": "1f6e8f7d-4f5d-4491-b3b0-dee160939d10",
+            "x": 1040,
+            "y": 1040,
+            "width": 242,
+            "height": 195,
+            "color": {}
+          },
+          {
+            "GUID": "67f1811d-9788-4429-b31b-14bc7e7c9215",
+            "x": 1417.9788557213924,
+            "y": 1217.4751243781102,
+            "width": 255,
+            "height": 249,
+            "color": {}
+          },
+          {
+            "GUID": "39717585-de17-452e-b766-a701b4c61d4c",
+            "x": 1823.0833333333317,
+            "y": 1253.9477611940313,
+            "width": 231,
+            "height": 159,
+            "color": {}
+          },
+          {
+            "GUID": "51cfe50e-67fd-4ff7-9777-28bb9087274d",
+            "x": 735.4203980099498,
+            "y": 1312.0621890547275,
+            "width": 221,
+            "height": 141,
+            "color": {}
+          },
+          {
+            "GUID": "fca66774-e5d0-44ad-ab88-058663ed669d",
+            "x": 1031.956467661691,
+            "y": 1328.6069651741286,
+            "width": 248,
+            "height": 123,
+            "color": {}
+          },
+          {
+            "GUID": "615ee886-5abb-4f8a-9e49-d2b14a135c28",
+            "x": 942.5833333333316,
+            "y": 886.2848258706459,
+            "width": 241,
+            "height": 123,
+            "color": {}
+          },
+          {
+            "GUID": "46051a13-d013-4fff-a311-24bf09b2ce9f",
+            "x": 1409.6330845771133,
+            "y": 973.3706467661688,
+            "width": 263,
+            "height": 177,
+            "color": {}
+          },
+          {
+            "GUID": "a4839e11-ae2d-43e8-bcb1-45689da6d1c6",
+            "x": 1909.9129353233825,
+            "y": 1075.7748756218919,
+            "width": 242,
+            "height": 123,
+            "color": {}
+          },
+          {
+            "GUID": "267a0adc-41c3-4066-94dc-1915d02d399e",
+            "x": 758.3619402985071,
+            "y": 1062.9502487562197,
+            "width": 224,
+            "height": 159,
+            "color": {}
+          }
+        ],
+        "erdDefinitions": {
+          "erd": [],
+          "rootPath": [],
+          "entities": [],
+          "decorativeSymbols": []
+        },
+        "buckets": [],
+        "collapsedNodes": [],
+        "activeRelationship": "",
+        "activeRelationshipFields": {
+          "childField": [],
+          "parentField": []
+        },
+        "selectedCollections": [],
+        "displayColorPicker": false,
+        "graphView": {
+          "erd": [],
+          "buckets": [],
+          "decorativeSymbols": [],
+          "forceLayout": true,
+          "defaultLinkLength": 300
+        },
+        "diagramViews": [],
+        "decorativeSymbols": [],
+        "nestedCollectionsLayout": "horizontal",
+        "options": [],
+        "relationshipUpdateDisabled": false
+      },
+      "collectionLevel": {},
+      "changed": false
+    },
+    "dtDiagram": {
+      "collapsedNodes": [],
+      "shouldDistributeCollections": false
+    }
+  }
+}
