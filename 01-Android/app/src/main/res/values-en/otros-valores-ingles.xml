@@ -1,7 +1,4 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="saludo_color">#612305</color>
-    <string name="saludo">Hello Friends</string>
-    <string name="mensaje">Port En</string>
-    <string name="dosmensaje">Lands En</string>
+    <color name="saludo_color">#2BA809</color>
 </resources>

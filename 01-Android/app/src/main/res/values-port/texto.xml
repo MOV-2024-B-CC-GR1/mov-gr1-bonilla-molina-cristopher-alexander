@@ -1,6 +1,4 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="saludo">Hola Amigos</string>
-    <string name="mensaje">Port Es</string>
-    <string name="dosmensaje">Lands Es</string>
 </resources>
