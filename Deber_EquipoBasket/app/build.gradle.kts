@@ -1,17 +1,14 @@
 plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.kotlin.android)
-    alias(libs.plugins.google.firebase.appdistribution)
-    alias(libs.plugins.google.gms.google.services)
-    alias(libs.plugins.google.android.libraries.mapsplatform.secrets.gradle.plugin)
 }
 
 android {
-    namespace = "com.example.ccgr12024b_cabm"
+    namespace = "com.example.deber_equipobasket"
     compileSdk = 34
 
     defaultConfig {
-        applicationId = "com.example.ccgr12024b_cabm"
+        applicationId = "com.example.deber_equipobasket"
         minSdk = 27
         targetSdk = 34
         versionCode = 1
@@ -36,21 +33,15 @@ android {
     kotlinOptions {
         jvmTarget = "1.8"
     }
-    buildFeatures {
-        viewBinding = true
-    }
 }
 
 dependencies {
-    implementation(libs.firebase.ui.auth)
+
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.appcompat)
     implementation(libs.material)
     implementation(libs.androidx.activity)
     implementation(libs.androidx.constraintlayout)
-    implementation(libs.androidx.preference)
-    implementation(libs.play.services.maps)
-    implementation(libs.firebase.auth)
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)

@@ -1,6 +1,9 @@
 package com.example.ccgr12024b_cabm
+import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Button
+import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 
 
@@ -12,18 +15,44 @@ class FRecyclerViewAdaptadorNombreDescripcion(
         FRecyclerViewAdaptadorNombreDescripcion.MyViewHolder
         >() {
             inner class MyViewHolder(
-                view: View): RecyclerView.ViewHolder(view){}
+                view: View): RecyclerView.ViewHolder(view){
+                    val nombreTextView: TextView
+                    val descripcionTextView: TextView
+                    val likesTextView: TextView
+                    val accionBoton: Button
+                    var numeroLikes = 0
+                    init{
+                        nombreTextView = view.findViewById<TextView>(R.id.tv_nombre)
+                        descripcionTextView = view.findViewById<TextView>(R.id.tv_descripcion)
+                        likesTextView = view.findViewById<TextView>(R.id.tv_likes)
+                        accionBoton = view.findViewById<Button>(R.id.btn_dar_like)
+                        accionBoton.setOnClickListener { anadirLikes()}
+                    }
+                fun anadirLikes(){
+                    numeroLikes = numeroLikes + 1
+                    likesTextView.text = numeroLikes.toString()
+                    contexto.aumentarTotalLikes()
+                }
+            }
 
+    // Setear el layout que vamos a utilizar
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MyViewHolder {
-        TODO("Not yet implemented")
+        val itemView = LayoutInflater
+            .from(parent.context)
+            .inflate(R.layout.recycler_view_vista, parent, false)
+        return MyViewHolder(itemView)
     }
 
     override fun getItemCount(): Int {
-        TODO("Not yet implemented")
+        return lista.size
     }
 
+    // Seteamos los datos para la iteracion
     override fun onBindViewHolder(holder: MyViewHolder, position: Int) {
-        TODO("Not yet implemented")
+        val entrenadorActual = lista[position]
+        holder.nombreTextView.text = entrenadorActual.nombre
+        holder.descripcionTextView.text = entrenadorActual.descripcion
+        holder.likesTextView.text = holder.numeroLikes.toString()
     }
 }
 
