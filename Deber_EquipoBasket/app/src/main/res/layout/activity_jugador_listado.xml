@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/pattern">
+
+    <ListView
+        android:id="@+id/lvJugadores"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="#99E0D8D6"
+        android:dividerHeight="1dp"
+        android:textColor="@color/white" />
+    <Button
+        android:id="@+id/btnAgregarJugador"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="34sp"
+        android:text="Agregar Jugador" />
+
+</LinearLayout>

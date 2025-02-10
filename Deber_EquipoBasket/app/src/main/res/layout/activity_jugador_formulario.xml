@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:background="@drawable/pattern">
+
+  <EditText
+      android:id="@+id/editTextNombreJugador"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:background="#99908F8F"
+      android:hint="Nombre"
+      android:textSize="20sp" />
+
+  <EditText
+      android:id="@+id/editTextEdadJugador"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:hint="Edad"
+      android:inputType="number"
+      android:background="#99908F8F"
+      android:textSize="20sp" />
+
+  <EditText
+      android:id="@+id/editTextEstaturaJugador"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:hint="Estatura (m)"
+      android:inputType="numberDecimal"
+      android:background="#99908F8F"
+      android:textSize="20sp" />
+
+  <EditText
+      android:id="@+id/editTextFechaIngresoJugador"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:hint="Fecha de Ingreso (YYYY-MM-DD)"
+      android:background="#99908F8F"
+      android:textSize="20sp" />
+
+  <EditText
+      android:id="@+id/editTextEsTitularJugador"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:hint="Es Titular (true/false)"
+      android:background="#99908F8F"
+      android:textSize="20sp" />
+
+  <Button
+      android:id="@+id/btnGuardarJugador"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:text="Guardar Jugador"
+      android:textSize="24sp" />
+</LinearLayout>

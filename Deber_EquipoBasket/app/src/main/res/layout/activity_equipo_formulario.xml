@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:background="@drawable/pattern">
+
+    <EditText
+        android:id="@+id/editTextNombreEquipo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#99908F8F"
+        android:hint="Nombre del Equipo"
+        android:textSize="20sp" />
+
+    <EditText
+        android:id="@+id/editTextCiudadEquipo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#99908F8F"
+        android:hint="Ciudad"
+        android:textSize="20sp" />
+
+    <EditText
+        android:id="@+id/editTextFundadoEquipo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#99908F8F"
+        android:hint="Fecha de Fundación (YYYY-MM-DD)"
+        android:textSize="20sp" />
+
+    <EditText
+        android:id="@+id/editTextCampeonatosGanadosEquipo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#99908F8F"
+        android:hint="Campeonatos Ganados"
+        android:inputType="number" />
+
+    <EditText
+        android:id="@+id/editTextActivoEquipo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#99908F8F"
+        android:hint="Activo (true/false)"
+        android:textSize="20sp" />
+
+    <EditText
+        android:id="@+id/editTextPromedioPuntosEquipo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#99908F8F"
+        android:hint="Promedio de Puntos"
+        android:inputType="numberDecimal" />
+
+    <Button
+        android:id="@+id/btnGuardarEquipo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Guardar Equipo"
+        android:textSize="24sp" />
+</LinearLayout>
