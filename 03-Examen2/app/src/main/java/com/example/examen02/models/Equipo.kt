@@ -10,8 +10,10 @@ data class Equipo(
     var campeonatosGanados: Int,
     var activo: Boolean,
     var promedioPuntos: Double,
+    var latitud: Double,
+    var longitud: Double
 ) {
     override fun toString(): String {
-        return "$nombre\n$ciudad\n$fundado\n$campeonatosGanados\n$activo\n$promedioPuntos"
+        return "$nombre\n$ciudad\n$campeonatosGanados\n$activo\n$promedioPuntos"
     }
 }

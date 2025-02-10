@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">examen02</string>
+    <string name="title_activity_base">base</string>
 </resources>

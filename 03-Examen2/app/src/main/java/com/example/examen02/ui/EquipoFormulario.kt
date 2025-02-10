@@ -19,11 +19,16 @@ class EquipoFormulario : AppCompatActivity() {
     private lateinit var editTextCampeonatosGanados: EditText
     private lateinit var editTextActivo: EditText
     private lateinit var editTextPromedioPuntos: EditText
+    private lateinit var editTextLatitud: EditText
+    private lateinit var editTextLongitud: EditText
     private lateinit var btnGuardar: Button
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_equipo_formulario)
+
+        editTextLatitud = findViewById(R.id.editTextLatitudEquipo)
+        editTextLongitud = findViewById(R.id.editTextLongitudEquipo)
 
         equipoRepositorio = EquipoRepositorio(this)
 
@@ -44,10 +49,11 @@ class EquipoFormulario : AppCompatActivity() {
             if (validarCampos()) {
                 val nombre = editTextNombre.text.toString()
                 val ciudad = editTextCiudad.text.toString()
-                //val fundado = editTextFundado.text.toString()
                 val campeonatosGanados = editTextCampeonatosGanados.text.toString().toInt()
                 val activo = editTextActivo.text.toString().toBoolean()
-                val promedioPuntos = editTextPromedioPuntos.text.toString().toDouble()
+                val promedioPuntos = editTextPromedioPuntos.text.toString().toDoubleOrNull() ?: 0.0
+                val latitud = editTextLatitud.text.toString().toDoubleOrNull() ?: 0.0
+                val longitud = editTextLongitud.text.toString().toDoubleOrNull() ?: 0.0
 
                 val equipo = Equipo(
                     id = if (equipoId == -1) 0 else equipoId, // Si es nuevo, ID será 0
@@ -56,7 +62,9 @@ class EquipoFormulario : AppCompatActivity() {
                     fundado = Date(),
                     campeonatosGanados = campeonatosGanados,
                     activo = activo,
-                    promedioPuntos = promedioPuntos
+                    promedioPuntos = promedioPuntos,
+                    latitud = latitud,
+                    longitud = longitud
                 )
 
                 val resultado = if (equipoId == -1) {
@@ -84,6 +92,8 @@ class EquipoFormulario : AppCompatActivity() {
             editTextCampeonatosGanados.setText(it.campeonatosGanados.toString())
             editTextActivo.setText(it.activo.toString())
             editTextPromedioPuntos.setText(it.promedioPuntos.toString())
+            editTextLatitud.setText(it.latitud.toString())
+            editTextLongitud.setText(it.longitud.toString())
         }
     }
 
@@ -94,6 +104,8 @@ class EquipoFormulario : AppCompatActivity() {
         val campeonatosGanados = editTextCampeonatosGanados.text.toString().trim()
         val activo = editTextActivo.text.toString().trim()
         val promedioPuntos = editTextPromedioPuntos.text.toString().trim()
+        val latitud = editTextLatitud.text.toString().trim()
+        val longitud = editTextLongitud.text.toString().trim()
 
         return when {
             nombre.isEmpty() -> {
@@ -120,6 +132,15 @@ class EquipoFormulario : AppCompatActivity() {
                 editTextPromedioPuntos.error = "El promedio de puntos es obligatorio"
                 false
             }
+            latitud.isEmpty() -> {
+                editTextLatitud.error = "La latitud es obligatoria"
+                false
+            }
+            longitud.isEmpty() -> {
+                editTextLongitud.error = "La longitud es obligatoria"
+                false
+            }
+
             else -> true
         }
     }

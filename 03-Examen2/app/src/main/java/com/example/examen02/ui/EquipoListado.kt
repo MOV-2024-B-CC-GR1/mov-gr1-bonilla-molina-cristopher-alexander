@@ -10,6 +10,7 @@ import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import com.example.examen02.R
 import com.example.examen02.data.EquipoRepositorio
+import com.example.examen02.mapa.MapaActivity
 import com.example.examen02.models.Equipo
 
 
@@ -63,7 +64,7 @@ class EquipoListado : AppCompatActivity() {
 
     private fun mostrarOpciones(equipo: Equipo) {
         // Mostrar un cuadro de diálogo con las opciones Actualizar, Eliminar y Ver Jugadors
-        val opciones = arrayOf("Actualizar", "Eliminar", "Ver Jugadores")
+        val opciones = arrayOf("Actualizar", "Eliminar", "Ver Jugadores", "Mapa")
         AlertDialog.Builder(this)
             .setTitle("Opciones para ${equipo.nombre}")
             .setItems(opciones) { _, which ->
@@ -77,9 +78,17 @@ class EquipoListado : AppCompatActivity() {
                     1 -> { // Eliminar
                         confirmarEliminacion(equipo)
                     }
-                    2 -> { // Ver Jugadors
+                    2 -> { // Ver Jugadores
                         val intent = Intent(this, JugadorListado::class.java).apply {
                             putExtra("equipoId", equipo.id)
+                        }
+                        startActivity(intent)
+                    }
+                    3 -> { // Ver Mapa
+                        val intent = Intent(this, MapaActivity::class.java).apply {
+                            putExtra("LATITUD", equipo.latitud)
+                            putExtra("LONGITUD", equipo.longitud)
+                            putExtra("nombre", equipo.nombre)
                         }
                         startActivity(intent)
                     }

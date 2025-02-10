@@ -48,6 +48,20 @@
         android:hint="Promedio de Puntos"
         android:inputType="numberDecimal" />
 
+    <EditText
+        android:id="@+id/editTextLatitudEquipo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Latitud"
+        android:inputType="numberDecimal|numberSigned"/>
+
+    <EditText
+        android:id="@+id/editTextLongitudEquipo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Longitud"
+        android:inputType="numberDecimal|numberSigned"/>
+
     <Button
         android:id="@+id/btnGuardarEquipo"
         android:layout_width="wrap_content"

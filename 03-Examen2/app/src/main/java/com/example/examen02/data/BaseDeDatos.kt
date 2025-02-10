@@ -20,7 +20,9 @@ class BaseDeDatos(context: Context) : SQLiteOpenHelper(context, DATABASE_NAME, n
                 fundado TEXT NOT NULL,
                 campeonatosGanados INTEGER NOT NULL,
                 activo TEXT NOT NULL,
-                promedioPuntos REAL NOT NULL
+                promedioPuntos REAL NOT NULL,
+                latitud REAL NOT NULL,  
+                longitud REAL NOT NULL
             );
         """
 

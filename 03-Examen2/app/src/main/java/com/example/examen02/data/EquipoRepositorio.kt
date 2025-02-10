@@ -20,6 +20,8 @@ class EquipoRepositorio(context: Context) {
             put("campeonatosGanados", equipo.campeonatosGanados)
             put("activo", equipo.activo)
             put("promedioPuntos", equipo.promedioPuntos)
+            put("latitud", equipo.latitud)
+            put("longitud", equipo.longitud)
         }
         val result = db.insert("Equipo", null, values)
         db.close()
@@ -35,6 +37,8 @@ class EquipoRepositorio(context: Context) {
             put("campeonatosGanados", equipo.campeonatosGanados)
             put("activo", equipo.activo)
             put("promedioPuntos", equipo.promedioPuntos)
+            put("latitud", equipo.latitud)
+            put("longitud", equipo.longitud)
         }
         val result = db.update("Equipo", values, "id = ?", arrayOf(equipo.id.toString()))
         db.close()
@@ -62,7 +66,9 @@ class EquipoRepositorio(context: Context) {
                     fundado = dateFormat.parse(cursor.getString(cursor.getColumnIndexOrThrow("fundado"))) ?: Date(),
                     campeonatosGanados = cursor.getInt(cursor.getColumnIndexOrThrow("campeonatosGanados")),
                     activo = cursor.getString(cursor.getColumnIndexOrThrow("activo")).toBoolean(),
-                    promedioPuntos = cursor.getDouble(cursor.getColumnIndexOrThrow("promedioPuntos"))
+                    promedioPuntos = cursor.getDouble(cursor.getColumnIndexOrThrow("promedioPuntos")),
+                    latitud = cursor.getDouble(cursor.getColumnIndexOrThrow("latitud")),
+                    longitud = cursor.getDouble(cursor.getColumnIndexOrThrow("longitud"))
                 )
                 equipos.add(equipo)
             } while (cursor.moveToNext())
@@ -86,7 +92,9 @@ class EquipoRepositorio(context: Context) {
                 fundado = dateFormat.parse(cursor.getString(cursor.getColumnIndexOrThrow("fundado"))) ?: Date(),
                 campeonatosGanados = cursor.getInt(cursor.getColumnIndexOrThrow("campeonatosGanados")),
                 activo = cursor.getString(cursor.getColumnIndexOrThrow("activo")).toBoolean(),
-                promedioPuntos = cursor.getDouble(cursor.getColumnIndexOrThrow("promedioPuntos"))
+                promedioPuntos = cursor.getDouble(cursor.getColumnIndexOrThrow("promedioPuntos")),
+                latitud = cursor.getDouble(cursor.getColumnIndexOrThrow("latitud")),
+                longitud = cursor.getDouble(cursor.getColumnIndexOrThrow("longitud"))
             )
         }
 
