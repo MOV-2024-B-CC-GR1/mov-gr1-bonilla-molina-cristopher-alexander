@@ -1,4 +1,4 @@
-package com.example.deber_equipobasket.data
+package com.example.examen02.data
 
 import android.content.Context
 import android.database.sqlite.SQLiteDatabase

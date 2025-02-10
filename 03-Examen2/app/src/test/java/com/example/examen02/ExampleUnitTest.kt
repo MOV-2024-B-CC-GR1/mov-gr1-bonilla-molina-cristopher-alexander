@@ -1,4 +1,4 @@
-package com.example.deber_equipobasket
+package com.example.examen02
 
 import org.junit.Test
 

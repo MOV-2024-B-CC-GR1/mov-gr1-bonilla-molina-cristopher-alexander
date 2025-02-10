@@ -19,5 +19,5 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = "Deber_EquipoBasket"
+rootProject.name = "examen02"
 include(":app")

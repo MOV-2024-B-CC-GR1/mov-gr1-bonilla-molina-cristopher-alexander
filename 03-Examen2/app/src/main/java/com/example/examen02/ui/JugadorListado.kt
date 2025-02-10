@@ -1,4 +1,4 @@
-package com.example.deber_equipobasket.ui
+package com.example.examen02.ui
 
 import android.content.Intent
 import android.os.Bundle
@@ -8,9 +8,9 @@ import android.widget.ListView
 import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
-import com.example.deber_equipobasket.R
-import com.example.deber_equipobasket.models.Jugador
-import com.example.deber_equipobasket.data.JugadorRepositorio
+import com.example.examen02.R
+import com.example.examen02.models.Jugador
+import com.example.examen02.data.JugadorRepositorio
 
 class JugadorListado : AppCompatActivity() {
     private lateinit var jugadorRepositorio: JugadorRepositorio

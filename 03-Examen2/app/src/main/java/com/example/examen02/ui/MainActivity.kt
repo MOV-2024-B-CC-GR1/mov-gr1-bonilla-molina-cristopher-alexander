@@ -1,10 +1,8 @@
-package com.example.deber_equipobasket.ui
+package com.example.examen02.ui
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.view.ViewCompat
-import androidx.core.view.WindowInsetsCompat
-import com.example.deber_equipobasket.R
+import com.example.examen02.R
 import android.content.Intent
 import android.widget.Button
 

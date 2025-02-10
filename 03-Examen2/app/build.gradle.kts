@@ -4,11 +4,11 @@ plugins {
 }
 
 android {
-    namespace = "com.example.deber_equipobasket"
+    namespace = "com.example.examen02"
     compileSdk = 35
 
     defaultConfig {
-        applicationId = "com.example.deber_equipobasket"
+        applicationId = "com.example.examen02"
         minSdk = 27
         targetSdk = 35
         versionCode = 1

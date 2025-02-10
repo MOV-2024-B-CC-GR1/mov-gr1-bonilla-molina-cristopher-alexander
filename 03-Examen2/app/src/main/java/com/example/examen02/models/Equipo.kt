@@ -1,4 +1,4 @@
-package com.example.deber_equipobasket.models
+package com.example.examen02.models
 
 import java.util.Date
 

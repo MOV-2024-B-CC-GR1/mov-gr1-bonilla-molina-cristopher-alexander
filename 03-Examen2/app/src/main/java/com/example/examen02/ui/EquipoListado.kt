@@ -1,4 +1,4 @@
-package com.example.deber_equipobasket.ui
+package com.example.examen02.ui
 
 import android.content.Intent
 import android.os.Bundle
@@ -6,14 +6,11 @@ import android.widget.ArrayAdapter
 import android.widget.Button
 import android.widget.ListView
 import android.widget.Toast
-import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.view.ViewCompat
-import androidx.core.view.WindowInsetsCompat
-import com.example.deber_equipobasket.R
-import com.example.deber_equipobasket.data.EquipoRepositorio
-import com.example.deber_equipobasket.models.Equipo
+import com.example.examen02.R
+import com.example.examen02.data.EquipoRepositorio
+import com.example.examen02.models.Equipo
 
 
 class EquipoListado : AppCompatActivity() {

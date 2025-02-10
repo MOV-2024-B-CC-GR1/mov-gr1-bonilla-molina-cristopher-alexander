@@ -1,9 +1,8 @@
-package com.example.deber_equipobasket.data
+package com.example.examen02.data
 
 import android.content.ContentValues
 import android.content.Context
-import android.database.Cursor
-import com.example.deber_equipobasket.models.Jugador
+import com.example.examen02.models.Jugador
 import java.text.SimpleDateFormat
 import java.util.*
 

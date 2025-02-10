@@ -1,16 +1,13 @@
-package com.example.deber_equipobasket.ui
+package com.example.examen02.ui
 
 import android.os.Bundle
 import android.widget.Button
 import android.widget.EditText
 import android.widget.Toast
-import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.view.ViewCompat
-import androidx.core.view.WindowInsetsCompat
-import com.example.deber_equipobasket.R
-import com.example.deber_equipobasket.data.EquipoRepositorio
-import com.example.deber_equipobasket.models.Equipo
+import com.example.examen02.R
+import com.example.examen02.data.EquipoRepositorio
+import com.example.examen02.models.Equipo
 import java.util.*
 
 class EquipoFormulario : AppCompatActivity() {
