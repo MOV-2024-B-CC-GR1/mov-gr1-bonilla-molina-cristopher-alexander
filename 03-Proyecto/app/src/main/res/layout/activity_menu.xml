@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/backmenu"
+    tools:context=".activities.Menu">
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="28dp"
+        android:background="@color/backLetras"
+        android:fontFamily="@font/madimi"
+        android:paddingLeft="140dp"
+        android:paddingTop="10dp"
+        android:paddingRight="140dp"
+        android:paddingBottom="10dp"
+        android:text="Menú"
+        android:textColor="@color/white"
+        android:textSize="34sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="64dp"
+        android:layout_height="61dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="28dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/logo" />
+
+    <Button
+        android:id="@+id/btn_salir"
+        android:layout_width="71dp"
+        android:layout_height="82dp"
+        android:layout_marginBottom="40dp"
+        android:background="@mipmap/salida"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/btn_mascota"
+        android:layout_width="323dp"
+        android:layout_height="67dp"
+        android:layout_marginTop="76dp"
+        android:backgroundTint="#9960ACF4"
+        android:text="Salud de tu Mascota"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.473"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+    <Button
+        android:id="@+id/btn_veterinarias"
+        android:layout_width="323dp"
+        android:layout_height="67dp"
+        android:layout_marginTop="48dp"
+        android:backgroundTint="#99EF0F8E"
+        android:paddingLeft="70dp"
+        android:paddingRight="70dp"
+        android:text="Veterinarias"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/btn_petTinder"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_mascota"
+        app:layout_constraintVertical_bias="0.054" />
+
+    <Button
+        android:id="@+id/btn_lugares"
+        android:layout_width="323dp"
+        android:layout_height="67dp"
+        android:layout_marginBottom="48dp"
+        android:backgroundTint="#99BFB00C"
+        android:text="Lugares Pet-friendly"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/btn_petTinder"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_mascota"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <Button
+        android:id="@+id/btn_petTinder"
+        android:layout_width="323dp"
+        android:layout_height="67dp"
+        android:layout_marginBottom="148dp"
+        android:backgroundTint="#99F16C49"
+        android:text="Pet-Tinder"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>
