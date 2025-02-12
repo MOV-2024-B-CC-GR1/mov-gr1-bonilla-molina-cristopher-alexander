@@ -37,4 +37,33 @@
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/logo" />
 
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="24dp"
+        android:background="#99EF0F8E"
+        android:padding="10dp"
+        android:text="Veterinarias cercanas"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textSize="24sp"
+        android:fontFamily="@font/madimi"
+        app:layout_constraintBottom_toTopOf="@+id/map_veterinarias"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+    <fragment
+        android:id="@+id/map_veterinarias"
+        android:name="com.google.android.gms.maps.SupportMapFragment"
+        android:layout_width="339dp"
+        android:layout_height="504dp"
+        android:layout_marginBottom="28dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.493"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:context=".activities.Veterinarias" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

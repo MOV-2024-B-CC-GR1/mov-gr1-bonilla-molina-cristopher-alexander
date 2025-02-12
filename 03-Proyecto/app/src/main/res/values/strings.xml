@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">03-Proyecto</string>
+    <string name="title_activity_mapa_base">MapaBase</string>
+    <string name="pet_image">Imagen de la mascota</string>
 </resources>

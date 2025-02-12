@@ -43,6 +43,8 @@
         android:layout_height="82dp"
         android:layout_marginBottom="40dp"
         android:background="@mipmap/salida"
+        android:textColor="@color/white"
+        android:fontFamily="@font/madimi"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
@@ -55,6 +57,8 @@
         android:backgroundTint="#9960ACF4"
         android:text="Salud de tu Mascota"
         android:textSize="20sp"
+        android:textColor="@color/white"
+        android:fontFamily="@font/madimi"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.473"
         app:layout_constraintStart_toStartOf="parent"
@@ -64,41 +68,43 @@
         android:id="@+id/btn_veterinarias"
         android:layout_width="323dp"
         android:layout_height="67dp"
-        android:layout_marginTop="48dp"
         android:backgroundTint="#99EF0F8E"
         android:paddingLeft="70dp"
         android:paddingRight="70dp"
         android:text="Veterinarias"
         android:textSize="20sp"
-        app:layout_constraintBottom_toTopOf="@+id/btn_petTinder"
+        android:textColor="@color/white"
+        android:fontFamily="@font/madimi"
+        app:layout_constraintBottom_toTopOf="@+id/btn_lugares"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btn_mascota"
-        app:layout_constraintVertical_bias="0.054" />
+        app:layout_constraintTop_toBottomOf="@+id/btn_mascota" />
 
     <Button
         android:id="@+id/btn_lugares"
         android:layout_width="323dp"
         android:layout_height="67dp"
-        android:layout_marginBottom="48dp"
+        android:layout_marginBottom="32dp"
         android:backgroundTint="#99BFB00C"
         android:text="Lugares Pet-friendly"
         android:textSize="20sp"
+        android:textColor="@color/white"
+        android:fontFamily="@font/madimi"
         app:layout_constraintBottom_toTopOf="@+id/btn_petTinder"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btn_mascota"
-        app:layout_constraintVertical_bias="1.0" />
+        app:layout_constraintHorizontal_bias="0.477"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <Button
         android:id="@+id/btn_petTinder"
         android:layout_width="323dp"
         android:layout_height="67dp"
-        android:layout_marginBottom="148dp"
+        android:layout_marginBottom="72dp"
         android:backgroundTint="#99F16C49"
         android:text="Pet-Tinder"
         android:textSize="20sp"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toTopOf="@+id/btn_salir"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>

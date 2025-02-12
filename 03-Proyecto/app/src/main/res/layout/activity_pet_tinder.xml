@@ -37,4 +37,60 @@
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/logo" />
 
+    <LinearLayout
+        android:layout_width="390dp"
+        android:layout_height="507dp"
+        android:gravity="center"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.476"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView"
+        app:layout_constraintVertical_bias="0.305">
+
+        <TextView
+            android:id="@+id/textViewPetName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:fontFamily="@font/madimi"
+            android:textColor="@color/black"
+            android:textSize="30sp" />
+
+        <ImageView
+            android:id="@+id/imageViewPet"
+            android:layout_width="293dp"
+            android:layout_height="336dp"
+            android:layout_marginBottom="20dp"
+            android:contentDescription="@string/pet_image" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/buttonDislike"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:backgroundTint="#DCCE0E0E"
+                android:fontFamily="@font/madimi"
+                android:textColor="@color/white"
+                android:textSize="20dp"
+                android:text="Dislike" />
+
+            <Button
+                android:id="@+id/buttonLike"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:backgroundTint="#DB2CBA32"
+                android:fontFamily="@font/madimi"
+                android:textColor="@color/white"
+                android:textSize="20dp"
+                android:text="Like" />
+        </LinearLayout>
+    </LinearLayout>
+
 </androidx.constraintlayout.widget.ConstraintLayout>
